@@ -8,25 +8,21 @@
 
 package org.atdl4j.fixatdl.core;
 
-import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
 import org.atdl4j.fixatdl.layout.StrategyLayoutT;
 import org.atdl4j.fixatdl.validation.EditT;
 import org.atdl4j.fixatdl.validation.StrategyEditT;
 
+import javax.xml.bind.annotation.*;
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * <p>Java class for Strategy_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Strategy_t">
  *   &lt;complexContent>
@@ -67,20 +63,18 @@ import org.atdl4j.fixatdl.validation.StrategyEditT;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Strategy_t", propOrder = {
-    "description",
-    "regions",
-    "markets",
-    "securityTypes",
-    "parameter",
-    "edit",
-    "strategyLayout",
-    "repeatingGroup",
-    "strategyEdit"
+        "description",
+        "regions",
+        "markets",
+        "securityTypes",
+        "parameter",
+        "edit",
+        "strategyLayout",
+        "repeatingGroup",
+        "strategyEdit"
 })
 public class StrategyT {
 
@@ -142,11 +136,9 @@ public class StrategyT {
 
     /**
      * Description of the Strategy.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDescription() {
         return description;
@@ -154,11 +146,9 @@ public class StrategyT {
 
     /**
      * Sets the value of the description property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDescription(String value) {
         this.description = value;
@@ -166,11 +156,9 @@ public class StrategyT {
 
     /**
      * Gets the value of the regions property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link RegionsT }
-     *     
+     *
+     * @return possible object is
+     * {@link RegionsT }
      */
     public RegionsT getRegions() {
         return regions;
@@ -178,11 +166,9 @@ public class StrategyT {
 
     /**
      * Sets the value of the regions property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link RegionsT }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link RegionsT }
      */
     public void setRegions(RegionsT value) {
         this.regions = value;
@@ -190,11 +176,9 @@ public class StrategyT {
 
     /**
      * Gets the value of the markets property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link MarketsT }
-     *     
+     *
+     * @return possible object is
+     * {@link MarketsT }
      */
     public MarketsT getMarkets() {
         return markets;
@@ -202,11 +186,9 @@ public class StrategyT {
 
     /**
      * Sets the value of the markets property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link MarketsT }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link MarketsT }
      */
     public void setMarkets(MarketsT value) {
         this.markets = value;
@@ -214,11 +196,9 @@ public class StrategyT {
 
     /**
      * Gets the value of the securityTypes property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link SecurityTypesT }
-     *     
+     *
+     * @return possible object is
+     * {@link SecurityTypesT }
      */
     public SecurityTypesT getSecurityTypes() {
         return securityTypes;
@@ -226,11 +206,9 @@ public class StrategyT {
 
     /**
      * Sets the value of the securityTypes property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link SecurityTypesT }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link SecurityTypesT }
      */
     public void setSecurityTypes(SecurityTypesT value) {
         this.securityTypes = value;
@@ -238,25 +216,23 @@ public class StrategyT {
 
     /**
      * Gets the value of the parameter property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the parameter property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getParameter().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ParameterT }
-     * 
-     * 
      */
     public List<ParameterT> getParameter() {
         if (parameter == null) {
@@ -267,25 +243,23 @@ public class StrategyT {
 
     /**
      * Gets the value of the edit property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the edit property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getEdit().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EditT }
-     * 
-     * 
      */
     public List<EditT> getEdit() {
         if (edit == null) {
@@ -296,11 +270,9 @@ public class StrategyT {
 
     /**
      * Gets the value of the strategyLayout property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StrategyLayoutT }
-     *     
+     *
+     * @return possible object is
+     * {@link StrategyLayoutT }
      */
     public StrategyLayoutT getStrategyLayout() {
         return strategyLayout;
@@ -308,11 +280,9 @@ public class StrategyT {
 
     /**
      * Sets the value of the strategyLayout property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StrategyLayoutT }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StrategyLayoutT }
      */
     public void setStrategyLayout(StrategyLayoutT value) {
         this.strategyLayout = value;
@@ -320,11 +290,9 @@ public class StrategyT {
 
     /**
      * Gets the value of the repeatingGroup property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link RepeatingGroupT }
-     *     
+     *
+     * @return possible object is
+     * {@link RepeatingGroupT }
      */
     public RepeatingGroupT getRepeatingGroup() {
         return repeatingGroup;
@@ -332,11 +300,9 @@ public class StrategyT {
 
     /**
      * Sets the value of the repeatingGroup property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link RepeatingGroupT }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link RepeatingGroupT }
      */
     public void setRepeatingGroup(RepeatingGroupT value) {
         this.repeatingGroup = value;
@@ -344,25 +310,23 @@ public class StrategyT {
 
     /**
      * Gets the value of the strategyEdit property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the strategyEdit property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getStrategyEdit().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link StrategyEditT }
-     * 
-     * 
      */
     public List<StrategyEditT> getStrategyEdit() {
         if (strategyEdit == null) {
@@ -373,11 +337,9 @@ public class StrategyT {
 
     /**
      * Gets the value of the name property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getName() {
         return name;
@@ -385,11 +347,9 @@ public class StrategyT {
 
     /**
      * Sets the value of the name property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setName(String value) {
         this.name = value;
@@ -397,11 +357,9 @@ public class StrategyT {
 
     /**
      * Gets the value of the uiRep property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getUiRep() {
         return uiRep;
@@ -409,11 +367,9 @@ public class StrategyT {
 
     /**
      * Sets the value of the uiRep property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setUiRep(String value) {
         this.uiRep = value;
@@ -421,11 +377,9 @@ public class StrategyT {
 
     /**
      * Gets the value of the wireValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getWireValue() {
         return wireValue;
@@ -433,11 +387,9 @@ public class StrategyT {
 
     /**
      * Sets the value of the wireValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setWireValue(String value) {
         this.wireValue = value;
@@ -445,11 +397,9 @@ public class StrategyT {
 
     /**
      * Gets the value of the version property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getVersion() {
         return version;
@@ -457,11 +407,9 @@ public class StrategyT {
 
     /**
      * Sets the value of the version property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setVersion(String value) {
         this.version = value;
@@ -469,11 +417,9 @@ public class StrategyT {
 
     /**
      * Gets the value of the fixMsgType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getFixMsgType() {
         return fixMsgType;
@@ -481,11 +427,9 @@ public class StrategyT {
 
     /**
      * Sets the value of the fixMsgType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setFixMsgType(String value) {
         this.fixMsgType = value;
@@ -493,11 +437,9 @@ public class StrategyT {
 
     /**
      * Gets the value of the disclosureDoc property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDisclosureDoc() {
         return disclosureDoc;
@@ -505,11 +447,9 @@ public class StrategyT {
 
     /**
      * Sets the value of the disclosureDoc property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDisclosureDoc(String value) {
         this.disclosureDoc = value;
@@ -517,11 +457,9 @@ public class StrategyT {
 
     /**
      * Gets the value of the sentOrderLink property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getSentOrderLink() {
         return sentOrderLink;
@@ -529,11 +467,9 @@ public class StrategyT {
 
     /**
      * Sets the value of the sentOrderLink property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setSentOrderLink(String value) {
         this.sentOrderLink = value;
@@ -541,11 +477,9 @@ public class StrategyT {
 
     /**
      * Gets the value of the providerID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getProviderID() {
         return providerID;
@@ -553,11 +487,9 @@ public class StrategyT {
 
     /**
      * Sets the value of the providerID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setProviderID(String value) {
         this.providerID = value;
@@ -565,11 +497,9 @@ public class StrategyT {
 
     /**
      * Gets the value of the providerSubID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getProviderSubID() {
         return providerSubID;
@@ -577,11 +507,9 @@ public class StrategyT {
 
     /**
      * Sets the value of the providerSubID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setProviderSubID(String value) {
         this.providerSubID = value;
@@ -589,11 +517,9 @@ public class StrategyT {
 
     /**
      * Gets the value of the imageLocation property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getImageLocation() {
         return imageLocation;
@@ -601,11 +527,9 @@ public class StrategyT {
 
     /**
      * Sets the value of the imageLocation property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setImageLocation(String value) {
         this.imageLocation = value;
@@ -613,11 +537,9 @@ public class StrategyT {
 
     /**
      * Gets the value of the totalLegs property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getTotalLegs() {
         return totalLegs;
@@ -625,11 +547,9 @@ public class StrategyT {
 
     /**
      * Sets the value of the totalLegs property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setTotalLegs(BigInteger value) {
         this.totalLegs = value;
@@ -637,11 +557,9 @@ public class StrategyT {
 
     /**
      * Gets the value of the totalOrders property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getTotalOrders() {
         return totalOrders;
@@ -649,11 +567,9 @@ public class StrategyT {
 
     /**
      * Sets the value of the totalOrders property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setTotalOrders(BigInteger value) {
         this.totalOrders = value;
@@ -661,11 +577,9 @@ public class StrategyT {
 
     /**
      * Gets the value of the commonIDTag property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getCommonIDTag() {
         return commonIDTag;
@@ -673,11 +587,9 @@ public class StrategyT {
 
     /**
      * Sets the value of the commonIDTag property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setCommonIDTag(BigInteger value) {
         this.commonIDTag = value;
@@ -685,11 +597,9 @@ public class StrategyT {
 
     /**
      * Gets the value of the totalOrdersTag property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getTotalOrdersTag() {
         return totalOrdersTag;
@@ -697,11 +607,9 @@ public class StrategyT {
 
     /**
      * Sets the value of the totalOrdersTag property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setTotalOrdersTag(BigInteger value) {
         this.totalOrdersTag = value;
@@ -709,11 +617,9 @@ public class StrategyT {
 
     /**
      * Gets the value of the orderSequenceTag property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getOrderSequenceTag() {
         return orderSequenceTag;
@@ -721,11 +627,9 @@ public class StrategyT {
 
     /**
      * Sets the value of the orderSequenceTag property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setOrderSequenceTag(BigInteger value) {
         this.orderSequenceTag = value;

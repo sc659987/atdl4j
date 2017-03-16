@@ -8,22 +8,18 @@
 
 package org.atdl4j.fixatdl.core;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * The list of security types that the given strategy is valid for.  The absence of any security types implies that the strategy is valid for all markets.
- * 
+ * <p>
  * <p>Java class for SecurityTypes_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="SecurityTypes_t">
  *   &lt;complexContent>
@@ -167,12 +163,10 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SecurityTypes_t", propOrder = {
-    "securityType"
+        "securityType"
 })
 public class SecurityTypesT {
 
@@ -181,25 +175,23 @@ public class SecurityTypesT {
 
     /**
      * Gets the value of the securityType property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the securityType property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getSecurityType().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link SecurityTypesT.SecurityType }
-     * 
-     * 
      */
     public List<SecurityTypesT.SecurityType> getSecurityType() {
         if (securityType == null) {
@@ -211,9 +203,9 @@ public class SecurityTypesT {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -347,8 +339,6 @@ public class SecurityTypesT {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -361,11 +351,9 @@ public class SecurityTypesT {
 
         /**
          * Gets the value of the name property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getName() {
             return name;
@@ -373,11 +361,9 @@ public class SecurityTypesT {
 
         /**
          * Sets the value of the name property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setName(String value) {
             this.name = value;
@@ -385,11 +371,9 @@ public class SecurityTypesT {
 
         /**
          * Gets the value of the inclusion property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link InclusionT }
-         *     
+         *
+         * @return possible object is
+         * {@link InclusionT }
          */
         public InclusionT getInclusion() {
             return inclusion;
@@ -397,11 +381,9 @@ public class SecurityTypesT {
 
         /**
          * Sets the value of the inclusion property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link InclusionT }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link InclusionT }
          */
         public void setInclusion(InclusionT value) {
             this.inclusion = value;

@@ -18,11 +18,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Derived parameter type corresponding to the FIX "Language" type defined in the FIX specification.
- * 
+ * <p>
  * <p>Java class for Language_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Language_t">
  *   &lt;complexContent>
@@ -32,14 +32,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Language_t")
 public class LanguageT
-    extends ParameterT
-{
+        extends ParameterT {
 
     @XmlAttribute
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -47,11 +44,9 @@ public class LanguageT
 
     /**
      * Gets the value of the constValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getConstValue() {
         return constValue;
@@ -59,11 +54,9 @@ public class LanguageT
 
     /**
      * Sets the value of the constValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setConstValue(String value) {
         this.constValue = value;

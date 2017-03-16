@@ -16,11 +16,11 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Derived parameter type corresponding to the FIX "int" type defined in the FIX specification.
- * 
+ * <p>
  * <p>Java class for Int_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Int_t">
  *   &lt;complexContent>
@@ -32,14 +32,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Int_t")
 public class IntT
-    extends ParameterT
-{
+        extends ParameterT {
 
     @XmlAttribute
     protected Integer minValue;
@@ -50,11 +47,9 @@ public class IntT
 
     /**
      * Gets the value of the minValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getMinValue() {
         return minValue;
@@ -62,11 +57,9 @@ public class IntT
 
     /**
      * Sets the value of the minValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setMinValue(Integer value) {
         this.minValue = value;
@@ -74,11 +67,9 @@ public class IntT
 
     /**
      * Gets the value of the maxValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getMaxValue() {
         return maxValue;
@@ -86,11 +77,9 @@ public class IntT
 
     /**
      * Sets the value of the maxValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setMaxValue(Integer value) {
         this.maxValue = value;
@@ -98,11 +87,9 @@ public class IntT
 
     /**
      * Gets the value of the constValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public Integer getConstValue() {
         return constValue;
@@ -110,11 +97,9 @@ public class IntT
 
     /**
      * Sets the value of the constValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setConstValue(Integer value) {
         this.constValue = value;

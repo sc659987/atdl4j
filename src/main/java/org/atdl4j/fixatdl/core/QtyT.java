@@ -8,20 +8,20 @@
 
 package org.atdl4j.fixatdl.core;
 
-import java.math.BigDecimal;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
+import java.math.BigDecimal;
 
 
 /**
  * Derived parameter type corresponding to the FIX "Qty" type defined in the FIX specification.
- * 
+ * <p>
  * <p>Java class for Qty_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Qty_t">
  *   &lt;complexContent>
@@ -33,14 +33,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Qty_t")
 public class QtyT
-    extends NumericT
-{
+        extends NumericT {
 
     @XmlAttribute
     protected BigDecimal minValue;
@@ -51,11 +48,9 @@ public class QtyT
 
     /**
      * Gets the value of the minValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @return possible object is
+     * {@link BigDecimal }
      */
     public BigDecimal getMinValue() {
         if (minValue == null) {
@@ -67,11 +62,9 @@ public class QtyT
 
     /**
      * Sets the value of the minValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigDecimal }
      */
     public void setMinValue(BigDecimal value) {
         this.minValue = value;
@@ -79,11 +72,9 @@ public class QtyT
 
     /**
      * Gets the value of the maxValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @return possible object is
+     * {@link BigDecimal }
      */
     public BigDecimal getMaxValue() {
         return maxValue;
@@ -91,11 +82,9 @@ public class QtyT
 
     /**
      * Sets the value of the maxValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigDecimal }
      */
     public void setMaxValue(BigDecimal value) {
         this.maxValue = value;
@@ -103,11 +92,9 @@ public class QtyT
 
     /**
      * Gets the value of the constValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @return possible object is
+     * {@link BigDecimal }
      */
     public BigDecimal getConstValue() {
         return constValue;
@@ -115,11 +102,9 @@ public class QtyT
 
     /**
      * Sets the value of the constValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigDecimal }
      */
     public void setConstValue(BigDecimal value) {
         this.constValue = value;

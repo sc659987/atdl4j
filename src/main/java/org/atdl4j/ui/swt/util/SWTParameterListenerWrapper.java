@@ -6,36 +6,35 @@ import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
 
 
-
 public class SWTParameterListenerWrapper implements Listener {
 
-	private SWTWidget<?> parameter;
+    private SWTWidget<?> parameter;
 
-	public Listener getDelegate() {
-		return delegate;
-	}
+    public Listener getDelegate() {
+        return delegate;
+    }
 
-	private Listener delegate;
+    private Listener delegate;
 
-	public SWTParameterListenerWrapper(SWTWidget<?> parameter, Listener delegate) {
-		this.parameter = parameter;
-		this.delegate = delegate;
-	}
+    public SWTParameterListenerWrapper(SWTWidget<?> parameter, Listener delegate) {
+        this.parameter = parameter;
+        this.delegate = delegate;
+    }
 
-	public void handleEvent(Event event) {
-		delegate.handleEvent(new SWTControlEvent(parameter));
-	}
+    public void handleEvent(Event event) {
+        delegate.handleEvent(new SWTControlEvent(parameter));
+    }
 
-	public boolean equals(Object obj) {
-		if (obj == this) {
-			return true;
-		}
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
 
-		if (obj instanceof Listener) {
-			Listener l = (Listener) obj;
-			return l == delegate;
-		}
+        if (obj instanceof Listener) {
+            Listener l = (Listener) obj;
+            return l == delegate;
+        }
 
-		return super.equals(obj);
-	}
+        return super.equals(obj);
+    }
 }

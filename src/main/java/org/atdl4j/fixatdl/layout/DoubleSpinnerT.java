@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for DoubleSpinner_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="DoubleSpinner_t">
  *   &lt;complexContent>
@@ -46,14 +46,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DoubleSpinner_t")
 public class DoubleSpinnerT
-    extends ControlT
-{
+        extends ControlT {
 
     @XmlAttribute
     protected Double initValue;
@@ -68,11 +65,9 @@ public class DoubleSpinnerT
 
     /**
      * Gets the value of the initValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *
+     * @return possible object is
+     * {@link Double }
      */
     public Double getInitValue() {
         return initValue;
@@ -80,11 +75,9 @@ public class DoubleSpinnerT
 
     /**
      * Sets the value of the initValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Double }
      */
     public void setInitValue(Double value) {
         this.initValue = value;
@@ -92,11 +85,9 @@ public class DoubleSpinnerT
 
     /**
      * Gets the value of the innerIncrement property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *
+     * @return possible object is
+     * {@link Double }
      */
     public Double getInnerIncrement() {
         return innerIncrement;
@@ -104,11 +95,9 @@ public class DoubleSpinnerT
 
     /**
      * Sets the value of the innerIncrement property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Double }
      */
     public void setInnerIncrement(Double value) {
         this.innerIncrement = value;
@@ -116,11 +105,9 @@ public class DoubleSpinnerT
 
     /**
      * Gets the value of the innerIncrementPolicy property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getInnerIncrementPolicy() {
         return innerIncrementPolicy;
@@ -128,11 +115,9 @@ public class DoubleSpinnerT
 
     /**
      * Sets the value of the innerIncrementPolicy property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setInnerIncrementPolicy(String value) {
         this.innerIncrementPolicy = value;
@@ -140,11 +125,9 @@ public class DoubleSpinnerT
 
     /**
      * Gets the value of the outerIncrement property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *
+     * @return possible object is
+     * {@link Double }
      */
     public Double getOuterIncrement() {
         return outerIncrement;
@@ -152,11 +135,9 @@ public class DoubleSpinnerT
 
     /**
      * Sets the value of the outerIncrement property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Double }
      */
     public void setOuterIncrement(Double value) {
         this.outerIncrement = value;
@@ -164,11 +145,9 @@ public class DoubleSpinnerT
 
     /**
      * Gets the value of the outerIncrementPolicy property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getOuterIncrementPolicy() {
         return outerIncrementPolicy;
@@ -176,11 +155,9 @@ public class DoubleSpinnerT
 
     /**
      * Sets the value of the outerIncrementPolicy property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setOuterIncrementPolicy(String value) {
         this.outerIncrementPolicy = value;

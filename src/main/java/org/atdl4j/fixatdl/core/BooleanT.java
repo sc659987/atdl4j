@@ -16,11 +16,11 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Derived parameter type corresponding to the FIX "Boolean" type defined in the FIX specification.
- * 
+ * <p>
  * <p>Java class for Boolean_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Boolean_t">
  *   &lt;complexContent>
@@ -32,14 +32,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Boolean_t")
 public class BooleanT
-    extends ParameterT
-{
+        extends ParameterT {
 
     @XmlAttribute
     protected String trueWireValue;
@@ -50,11 +47,9 @@ public class BooleanT
 
     /**
      * Gets the value of the trueWireValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTrueWireValue() {
         return trueWireValue;
@@ -62,11 +57,9 @@ public class BooleanT
 
     /**
      * Sets the value of the trueWireValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTrueWireValue(String value) {
         this.trueWireValue = value;
@@ -74,11 +67,9 @@ public class BooleanT
 
     /**
      * Gets the value of the falseWireValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getFalseWireValue() {
         return falseWireValue;
@@ -86,11 +77,9 @@ public class BooleanT
 
     /**
      * Sets the value of the falseWireValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setFalseWireValue(String value) {
         this.falseWireValue = value;
@@ -98,11 +87,9 @@ public class BooleanT
 
     /**
      * Gets the value of the constValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getConstValue() {
         return constValue;
@@ -110,11 +97,9 @@ public class BooleanT
 
     /**
      * Sets the value of the constValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setConstValue(String value) {
         this.constValue = value;

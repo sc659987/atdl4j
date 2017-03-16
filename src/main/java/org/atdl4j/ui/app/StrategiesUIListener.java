@@ -8,12 +8,12 @@ import org.atdl4j.fixatdl.core.StrategyT;
 
 /**
  * Listener for StrategiesPanel
- * 
+ * <p>
  * Creation date: (Feb 7, 2010 9:52:59 PM)
+ *
  * @author Scott Atwell
  * @version 1.0, Feb 7, 2010
  */
-public interface StrategiesUIListener
-{
-	public void strategySelected(StrategyT strategy, int index);
+public interface StrategiesUIListener {
+    public void strategySelected(StrategyT strategy, int index);
 }

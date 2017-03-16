@@ -8,25 +8,21 @@
 
 package org.atdl4j.fixatdl.core;
 
+import org.atdl4j.fixatdl.validation.EditT;
+
+import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import org.atdl4j.fixatdl.validation.EditT;
 
 
 /**
- *  This element is used as a container for strategy elements. The motivation behind this element is to allow an algorithm provider to describe more than one algorithm in a single XML document.     
- * 
+ * This element is used as a container for strategy elements. The motivation behind this element is to allow an algorithm provider to describe more than one algorithm in a single XML document.
+ * <p>
  * <p>Java class for Strategies_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Strategies_t">
  *   &lt;complexContent>
@@ -46,14 +42,12 @@ import org.atdl4j.fixatdl.validation.EditT;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Strategies_t", propOrder = {
-    "description",
-    "edit",
-    "strategy"
+        "description",
+        "edit",
+        "strategy"
 })
 public class StrategiesT {
 
@@ -81,11 +75,9 @@ public class StrategiesT {
 
     /**
      * Description of the set of strategies or a description of the firm providing them.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDescription() {
         return description;
@@ -93,11 +85,9 @@ public class StrategiesT {
 
     /**
      * Sets the value of the description property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDescription(String value) {
         this.description = value;
@@ -105,25 +95,23 @@ public class StrategiesT {
 
     /**
      * Global rule definition. When used in this capacity Edit.id is a required attribute. Individual strategies may incorporate these rules by a reference to their 'id' attributes.Gets the value of the edit property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the edit property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getEdit().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EditT }
-     * 
-     * 
      */
     public List<EditT> getEdit() {
         if (edit == null) {
@@ -134,25 +122,23 @@ public class StrategiesT {
 
     /**
      * Gets the value of the strategy property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the strategy property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getStrategy().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link StrategyT }
-     * 
-     * 
      */
     public List<StrategyT> getStrategy() {
         if (strategy == null) {
@@ -163,11 +149,9 @@ public class StrategiesT {
 
     /**
      * Gets the value of the strategyIdentifierTag property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getStrategyIdentifierTag() {
         return strategyIdentifierTag;
@@ -175,11 +159,9 @@ public class StrategiesT {
 
     /**
      * Sets the value of the strategyIdentifierTag property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setStrategyIdentifierTag(BigInteger value) {
         this.strategyIdentifierTag = value;
@@ -187,11 +169,9 @@ public class StrategiesT {
 
     /**
      * Gets the value of the versionIdentifierTag property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getVersionIdentifierTag() {
         return versionIdentifierTag;
@@ -199,11 +179,9 @@ public class StrategiesT {
 
     /**
      * Sets the value of the versionIdentifierTag property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setVersionIdentifierTag(BigInteger value) {
         this.versionIdentifierTag = value;
@@ -211,11 +189,9 @@ public class StrategiesT {
 
     /**
      * Gets the value of the draftFlagIdentifierTag property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getDraftFlagIdentifierTag() {
         return draftFlagIdentifierTag;
@@ -223,11 +199,9 @@ public class StrategiesT {
 
     /**
      * Sets the value of the draftFlagIdentifierTag property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setDraftFlagIdentifierTag(BigInteger value) {
         this.draftFlagIdentifierTag = value;
@@ -235,11 +209,9 @@ public class StrategiesT {
 
     /**
      * Gets the value of the changeStrategyOnCxlRpl property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isChangeStrategyOnCxlRpl() {
         return changeStrategyOnCxlRpl;
@@ -247,11 +219,9 @@ public class StrategiesT {
 
     /**
      * Sets the value of the changeStrategyOnCxlRpl property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setChangeStrategyOnCxlRpl(Boolean value) {
         this.changeStrategyOnCxlRpl = value;
@@ -259,11 +229,9 @@ public class StrategiesT {
 
     /**
      * Gets the value of the imageLocation property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getImageLocation() {
         return imageLocation;
@@ -271,11 +239,9 @@ public class StrategiesT {
 
     /**
      * Sets the value of the imageLocation property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setImageLocation(String value) {
         this.imageLocation = value;
@@ -283,11 +249,9 @@ public class StrategiesT {
 
     /**
      * Gets the value of the tag957Support property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public boolean isTag957Support() {
         if (tag957Support == null) {
@@ -299,11 +263,9 @@ public class StrategiesT {
 
     /**
      * Sets the value of the tag957Support property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setTag957Support(Boolean value) {
         this.tag957Support = value;

@@ -8,20 +8,16 @@
 
 package org.atdl4j.fixatdl.layout;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java class for CheckBoxList_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="CheckBoxList_t">
  *   &lt;complexContent>
@@ -35,16 +31,13 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CheckBoxList_t", propOrder = {
-    "listItem"
+        "listItem"
 })
 public class CheckBoxListT
-    extends ControlT
-{
+        extends ControlT {
 
     @XmlElement(name = "ListItem")
     protected List<ListItemT> listItem;
@@ -55,25 +48,23 @@ public class CheckBoxListT
 
     /**
      * Gets the value of the listItem property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the listItem property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getListItem().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ListItemT }
-     * 
-     * 
      */
     public List<ListItemT> getListItem() {
         if (listItem == null) {
@@ -84,11 +75,9 @@ public class CheckBoxListT
 
     /**
      * Gets the value of the initValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getInitValue() {
         return initValue;
@@ -96,11 +85,9 @@ public class CheckBoxListT
 
     /**
      * Sets the value of the initValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setInitValue(String value) {
         this.initValue = value;
@@ -108,11 +95,9 @@ public class CheckBoxListT
 
     /**
      * Gets the value of the orientation property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PanelOrientationT }
-     *     
+     *
+     * @return possible object is
+     * {@link PanelOrientationT }
      */
     public PanelOrientationT getOrientation() {
         return orientation;
@@ -120,11 +105,9 @@ public class CheckBoxListT
 
     /**
      * Sets the value of the orientation property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PanelOrientationT }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PanelOrientationT }
      */
     public void setOrientation(PanelOrientationT value) {
         this.orientation = value;

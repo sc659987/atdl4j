@@ -4,339 +4,296 @@
  */
 package org.atdl4j.config;
 
+import org.atdl4j.fixatdl.core.StrategyT;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.atdl4j.fixatdl.core.StrategyT;
-
 /**
  * This class contains the "input" data provided by the external application which drive
- * Strategy eligibility (eg SecurityType_name, Market_MICCode, Region_name, Country_CountryCode) filtering logic 
+ * Strategy eligibility (eg SecurityType_name, Market_MICCode, Region_name, Country_CountryCode) filtering logic
  * (see INPUT_FIELD_NAME_STRATEGY_FILTER_* constants for exact names).
- * 
+ * <p>
  * The input data may also contain external values from "standard FIX fields" (eg OrderQty, Side, Price, TimeInForce, etc).
  * These values are passed by prefixing the name of each fieldname/value pair (<String, String>) with "FIX_" (eg "FIX_OrderQty", "FIX_Side").
  * The values are FIX wire values.  These can then be used as part of StateRule or ValidationRule logic.
- * 
+ * <p>
  * All of the input data is stored within a Map<String, String> consisting of fieldname and value (String wirevalue).
- *  
+ * <p>
  * Creation date: (Jan 19, 2010 8:56:36 AM)
+ *
  * @author Scott Atwell
  */
-public class InputAndFilterData
-{
-	public static String FIX_DEFINED_FIELD_PREFIX = "FIX_";
-	
-	private List<StrategyFilterInputData> strategyFilterInputDataList = null;  // -- Use more than one when multiple individual orders are associated with a single algo panel display --
-	
-	public static String INPUT_FIELD_NAME_INCREMENT_POLICY_LotSize = "FIX_FIXatdl_LotSize";
-	public static String INPUT_FIELD_NAME_INCREMENT_POLICY_Tick = "FIX_FIXatdl_Tick";
-	
-	private boolean inputCxlReplaceMode = false;
-	
-	// -- Used to pass "other standard FIX message fields (eg FIX_OrderQty, FIX_Price, FIX_TimeInForce, etc)" and Strategy-eligibility ones (eg FIX_FIXatdl_Region, FIX_FIXatdl_Country, etc) -- 
-	private Map<String, String> inputHiddenFieldNameValueMap = null;
-	
-	private List<String> inputStrategyNameList = null;  // -- if specified, controls the order strategy name choices presented to the user --
-	private Boolean applyInputStrategyNameListAsFilter = null; // -- if specified, exclude any strategyNames not in inputStrategyNameList -- 
+public class InputAndFilterData {
+    public static String FIX_DEFINED_FIELD_PREFIX = "FIX_";
 
-	private String inputSelectStrategyName = null;
+    private List<StrategyFilterInputData> strategyFilterInputDataList = null;  // -- Use more than one when multiple individual orders are associated with a single algo panel display --
 
-	/**
-	 * 
-	 */
-	public InputAndFilterData()
-	{
-		init();
-	}
-	
-	/**
-	 * 
-	 */
-	public void init()
-	{
-		setInputHiddenFieldNameValueMap( null );
-		setInputCxlReplaceMode( false );
-	}
-	
-	/**
-	 * @param aInputCxlReplaceMode
-	 */
-	public void setInputCxlReplaceMode( boolean aInputCxlReplaceMode )
-	{
-		inputCxlReplaceMode = aInputCxlReplaceMode;
-	}
+    public static String INPUT_FIELD_NAME_INCREMENT_POLICY_LotSize = "FIX_FIXatdl_LotSize";
+    public static String INPUT_FIELD_NAME_INCREMENT_POLICY_Tick = "FIX_FIXatdl_Tick";
 
-	/**
-	 * @param inputSelectStrategyName the inputSelectStrategyName to set
-	 */
-	public void setInputSelectStrategyName(String inputSelectStrategyName)
-	{
-		this.inputSelectStrategyName = inputSelectStrategyName;
-	}
+    private boolean inputCxlReplaceMode = false;
 
-	/**
-	 * @return the inputSelectStrategyName
-	 */
-	public String getInputSelectStrategyName()
-	{
-		return inputSelectStrategyName;
-	}
+    // -- Used to pass "other standard FIX message fields (eg FIX_OrderQty, FIX_Price, FIX_TimeInForce, etc)" and Strategy-eligibility ones (eg FIX_FIXatdl_Region, FIX_FIXatdl_Country, etc) --
+    private Map<String, String> inputHiddenFieldNameValueMap = null;
 
-	/**
-	 * @return
-	 */
-	public boolean getInputCxlReplaceMode()
-	{
-		return inputCxlReplaceMode;
-	}
+    private List<String> inputStrategyNameList = null;  // -- if specified, controls the order strategy name choices presented to the user --
+    private Boolean applyInputStrategyNameListAsFilter = null; // -- if specified, exclude any strategyNames not in inputStrategyNameList --
 
-	/**
-	 * @return the inputHiddenFieldNameValueMap
-	 */
-	public Map<String, String> getInputHiddenFieldNameValueMap()
-	{
-		return inputHiddenFieldNameValueMap;
-	}
+    private String inputSelectStrategyName = null;
 
-	/**
-	 * Helper method
-	 * @param aFieldName
-	 * @return
-	 */
-	public String getInputHiddenFieldValue( String aFieldName )
-	{
-		if ( getInputHiddenFieldNameValueMap() != null )
-		{
-			return getInputHiddenFieldNameValueMap().get( aFieldName );
-		}
-		else
-		{
-			return null;
-		}
-	}
+    /**
+     *
+     */
+    public InputAndFilterData() {
+        init();
+    }
 
-	/**
-	 * @param aInputHiddenFieldNameValueMap the inputHiddenFieldNameValueMap to set
-	 */
-	protected void setInputHiddenFieldNameValueMap(Map<String, String> aInputHiddenFieldNameValueMap)
-	{
-		inputHiddenFieldNameValueMap = aInputHiddenFieldNameValueMap;
-	}
+    /**
+     *
+     */
+    public void init() {
+        setInputHiddenFieldNameValueMap(null);
+        setInputCxlReplaceMode(false);
+    }
+
+    /**
+     * @param aInputCxlReplaceMode
+     */
+    public void setInputCxlReplaceMode(boolean aInputCxlReplaceMode) {
+        inputCxlReplaceMode = aInputCxlReplaceMode;
+    }
+
+    /**
+     * @param inputSelectStrategyName the inputSelectStrategyName to set
+     */
+    public void setInputSelectStrategyName(String inputSelectStrategyName) {
+        this.inputSelectStrategyName = inputSelectStrategyName;
+    }
+
+    /**
+     * @return the inputSelectStrategyName
+     */
+    public String getInputSelectStrategyName() {
+        return inputSelectStrategyName;
+    }
+
+    /**
+     * @return
+     */
+    public boolean getInputCxlReplaceMode() {
+        return inputCxlReplaceMode;
+    }
+
+    /**
+     * @return the inputHiddenFieldNameValueMap
+     */
+    public Map<String, String> getInputHiddenFieldNameValueMap() {
+        return inputHiddenFieldNameValueMap;
+    }
+
+    /**
+     * Helper method
+     *
+     * @param aFieldName
+     * @return
+     */
+    public String getInputHiddenFieldValue(String aFieldName) {
+        if (getInputHiddenFieldNameValueMap() != null) {
+            return getInputHiddenFieldNameValueMap().get(aFieldName);
+        } else {
+            return null;
+        }
+    }
+
+    /**
+     * @param aInputHiddenFieldNameValueMap the inputHiddenFieldNameValueMap to set
+     */
+    protected void setInputHiddenFieldNameValueMap(Map<String, String> aInputHiddenFieldNameValueMap) {
+        inputHiddenFieldNameValueMap = aInputHiddenFieldNameValueMap;
+    }
 
 
-	/**
-	 * @param aMap
-	 */
-	public void addMapToInputHiddenFieldNameValueMap( Map<String, String> aMap )
-	{
-		if ( getInputHiddenFieldNameValueMap() == null )
-		{
-			setInputHiddenFieldNameValueMap( new HashMap<String, String>() );
-		}
-		
-		getInputHiddenFieldNameValueMap().putAll( aMap );
-	}
-	
-	
-	/**
-	 * Checks applicability of aStrategy against each StrategyFilterInputData within getStrategyFilterInputDataList().
-	 * Returns true only if aStrategy meets criteria for all (least common denominator).
-	 * 
-	 * @param strategy
-	 * @return
-	 */
-	public boolean isStrategySupported(StrategyT aStrategy)
-	{
-		if ( aStrategy == null )
-		{
-			return false;
-		}
-		
-		if ( getStrategyFilterInputDataList() != null )
-		{
-			for ( StrategyFilterInputData tempStrategyFilterInputData : getStrategyFilterInputDataList() )
-			{
-				if ( tempStrategyFilterInputData.isStrategySupported( aStrategy ) == false )
-				{
-					return false;
-				}
-			}
-		}
-		
-		return true;
-	}
+    /**
+     * @param aMap
+     */
+    public void addMapToInputHiddenFieldNameValueMap(Map<String, String> aMap) {
+        if (getInputHiddenFieldNameValueMap() == null) {
+            setInputHiddenFieldNameValueMap(new HashMap<String, String>());
+        }
+
+        getInputHiddenFieldNameValueMap().putAll(aMap);
+    }
 
 
-	/**
-	 * @param aFieldName
-	 * @param aFieldValue
-	 */
-	public void setInputHiddenFieldNameValuePair( String aFieldName, String aFieldValue )
-	{
-		if ( getInputHiddenFieldNameValueMap() == null )
-		{
-			setInputHiddenFieldNameValueMap( new HashMap<String, String>() );
-		}
-		
-		if ( aFieldValue != null )
-		{
-			getInputHiddenFieldNameValueMap().put( aFieldName, aFieldValue );
-		}
-		else
-		{
-			// - attempt to remove existing entry if aFieldValue is null --
-			getInputHiddenFieldNameValueMap().remove( aFieldName );
-		}
-	}
-	
-	/**
-	 * This will prefix aFieldName with FIX_STANDARD_FIELD_INPUT_FIELD_NAME_PREFIX
-	 * @param aFieldName
-	 * @param aFieldValue
-	 */
-	public void setInputStandardFixFieldNameValuePair( String aFieldName, String aFieldValue )
-	{
-		if ( getInputHiddenFieldNameValueMap() == null )
-		{
-			setInputHiddenFieldNameValueMap( new HashMap<String, String>() );
-		}
-		
-		getInputHiddenFieldNameValueMap().put( (FIX_DEFINED_FIELD_PREFIX + aFieldName), aFieldValue );
-	}
-	
-	/**
-	 */
-	public BigDecimal getInputIncrementPolicy_LotSize()
-	{
-		String tempValue = getInputHiddenFieldValue( INPUT_FIELD_NAME_INCREMENT_POLICY_LotSize );
-		if ( tempValue != null )
-		{
-			return new BigDecimal( tempValue );
-		}
-		else
-		{
-			return null;
-		}
-	}
-	
-	/**
-	 */
-	public BigDecimal getInputIncrementPolicy_Tick()
-	{
-		String tempValue = getInputHiddenFieldValue( INPUT_FIELD_NAME_INCREMENT_POLICY_Tick );
-		if ( tempValue != null )
-		{
-			return new BigDecimal( tempValue );
-		}
-		else
-		{
-			return null;
-		}
-	}
+    /**
+     * Checks applicability of aStrategy against each StrategyFilterInputData within getStrategyFilterInputDataList().
+     * Returns true only if aStrategy meets criteria for all (least common denominator).
+     *
+     * @param strategy
+     * @return
+     */
+    public boolean isStrategySupported(StrategyT aStrategy) {
+        if (aStrategy == null) {
+            return false;
+        }
 
-	/**
-	 */
-	public void setInputIncrementPolicy_LotSize( BigDecimal aLotSize )
-	{
-		if ( aLotSize != null )
-		{
-			setInputHiddenFieldNameValuePair( INPUT_FIELD_NAME_INCREMENT_POLICY_LotSize, aLotSize.toString() );
-		}
-		else
-		{
-			setInputHiddenFieldNameValuePair( INPUT_FIELD_NAME_INCREMENT_POLICY_LotSize, null);
-		}
-	}
-	
-	/**
-	 */
-	public void setInputIncrementPolicy_Tick( BigDecimal aTick )
-	{
-		if ( aTick != null )
-		{
-			setInputHiddenFieldNameValuePair( INPUT_FIELD_NAME_INCREMENT_POLICY_Tick, aTick.toString() );
-		}
-		else
-		{
-			setInputHiddenFieldNameValuePair( INPUT_FIELD_NAME_INCREMENT_POLICY_Tick, null );
-		}
-	}
+        if (getStrategyFilterInputDataList() != null) {
+            for (StrategyFilterInputData tempStrategyFilterInputData : getStrategyFilterInputDataList()) {
+                if (tempStrategyFilterInputData.isStrategySupported(aStrategy) == false) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
 
 
-	/**
-	 * If specified, controls the order strategy name choices presented to the user
-	 * @param inputStrategyNameList the inputStrategyNameList to set
-	 */
-	public void setInputStrategyNameList(List<String> inputStrategyNameList)
-	{
-		this.inputStrategyNameList = inputStrategyNameList;
-	}
+    /**
+     * @param aFieldName
+     * @param aFieldValue
+     */
+    public void setInputHiddenFieldNameValuePair(String aFieldName, String aFieldValue) {
+        if (getInputHiddenFieldNameValueMap() == null) {
+            setInputHiddenFieldNameValueMap(new HashMap<String, String>());
+        }
 
-	/**
-	 * If specified, controls the order strategy name choices presented to the user
-	 * @return the inputStrategyNameList
-	 */
-	public List<String> getInputStrategyNameList()
-	{
-		return inputStrategyNameList;
-	}
+        if (aFieldValue != null) {
+            getInputHiddenFieldNameValueMap().put(aFieldName, aFieldValue);
+        } else {
+            // - attempt to remove existing entry if aFieldValue is null --
+            getInputHiddenFieldNameValueMap().remove(aFieldName);
+        }
+    }
 
-	/**
-	 * If specified, exclude any strategyNames not in inputStrategyNameList
-	 * @param applyInputStrategyNameListAsFilter the applyInputStrategyNameListAsFilter to set
-	 */
-	public void setApplyInputStrategyNameListAsFilter(Boolean applyInputStrategyNameListAsFilter)
-	{
-		this.applyInputStrategyNameListAsFilter = applyInputStrategyNameListAsFilter;
-	}
+    /**
+     * This will prefix aFieldName with FIX_STANDARD_FIELD_INPUT_FIELD_NAME_PREFIX
+     *
+     * @param aFieldName
+     * @param aFieldValue
+     */
+    public void setInputStandardFixFieldNameValuePair(String aFieldName, String aFieldValue) {
+        if (getInputHiddenFieldNameValueMap() == null) {
+            setInputHiddenFieldNameValueMap(new HashMap<String, String>());
+        }
 
-	/**
-	 * If specified, exclude any strategyNames not in inputStrategyNameList
-	 * @return the applyInputStrategyNameListAsFilter
-	 */
-	public Boolean getApplyInputStrategyNameListAsFilter()
-	{
-		return applyInputStrategyNameListAsFilter;
-	}
+        getInputHiddenFieldNameValueMap().put((FIX_DEFINED_FIELD_PREFIX + aFieldName), aFieldValue);
+    }
 
-	/**
-	 * Use more than one when multiple individual orders are associated with a single algo panel display
-	 * @return the strategyFilterInputDataList
-	 */
-	public List<StrategyFilterInputData> getStrategyFilterInputDataList()
-	{
-		return this.strategyFilterInputDataList;
-	}
+    /**
+     */
+    public BigDecimal getInputIncrementPolicy_LotSize() {
+        String tempValue = getInputHiddenFieldValue(INPUT_FIELD_NAME_INCREMENT_POLICY_LotSize);
+        if (tempValue != null) {
+            return new BigDecimal(tempValue);
+        } else {
+            return null;
+        }
+    }
 
-	/**
-	 * Use more than one when multiple individual orders are associated with a single algo panel display
-	 * @param aStrategyFilterInputDataList the strategyFilterInputDataList to set
-	 */
-	public void setStrategyFilterInputDataList(List<StrategyFilterInputData> aStrategyFilterInputDataList)
-	{
-		this.strategyFilterInputDataList = aStrategyFilterInputDataList;
-	}
-	
-	/**
-	 * Convenience method for single order for algo panel.
-	 * @param aStrategyFilterInputData
-	 */
-	public void setStrategyFilterInputData(StrategyFilterInputData aStrategyFilterInputData)
-	{
-		if ( aStrategyFilterInputData != null )
-		{
-			List<StrategyFilterInputData> tempList = new ArrayList<StrategyFilterInputData>();
-			tempList.add( aStrategyFilterInputData );
-			setStrategyFilterInputDataList( tempList );
-		}
-		else
-		{
-			setStrategyFilterInputDataList( null );
-		}
-	}
+    /**
+     */
+    public BigDecimal getInputIncrementPolicy_Tick() {
+        String tempValue = getInputHiddenFieldValue(INPUT_FIELD_NAME_INCREMENT_POLICY_Tick);
+        if (tempValue != null) {
+            return new BigDecimal(tempValue);
+        } else {
+            return null;
+        }
+    }
+
+    /**
+     */
+    public void setInputIncrementPolicy_LotSize(BigDecimal aLotSize) {
+        if (aLotSize != null) {
+            setInputHiddenFieldNameValuePair(INPUT_FIELD_NAME_INCREMENT_POLICY_LotSize, aLotSize.toString());
+        } else {
+            setInputHiddenFieldNameValuePair(INPUT_FIELD_NAME_INCREMENT_POLICY_LotSize, null);
+        }
+    }
+
+    /**
+     */
+    public void setInputIncrementPolicy_Tick(BigDecimal aTick) {
+        if (aTick != null) {
+            setInputHiddenFieldNameValuePair(INPUT_FIELD_NAME_INCREMENT_POLICY_Tick, aTick.toString());
+        } else {
+            setInputHiddenFieldNameValuePair(INPUT_FIELD_NAME_INCREMENT_POLICY_Tick, null);
+        }
+    }
+
+
+    /**
+     * If specified, controls the order strategy name choices presented to the user
+     *
+     * @param inputStrategyNameList the inputStrategyNameList to set
+     */
+    public void setInputStrategyNameList(List<String> inputStrategyNameList) {
+        this.inputStrategyNameList = inputStrategyNameList;
+    }
+
+    /**
+     * If specified, controls the order strategy name choices presented to the user
+     *
+     * @return the inputStrategyNameList
+     */
+    public List<String> getInputStrategyNameList() {
+        return inputStrategyNameList;
+    }
+
+    /**
+     * If specified, exclude any strategyNames not in inputStrategyNameList
+     *
+     * @param applyInputStrategyNameListAsFilter the applyInputStrategyNameListAsFilter to set
+     */
+    public void setApplyInputStrategyNameListAsFilter(Boolean applyInputStrategyNameListAsFilter) {
+        this.applyInputStrategyNameListAsFilter = applyInputStrategyNameListAsFilter;
+    }
+
+    /**
+     * If specified, exclude any strategyNames not in inputStrategyNameList
+     *
+     * @return the applyInputStrategyNameListAsFilter
+     */
+    public Boolean getApplyInputStrategyNameListAsFilter() {
+        return applyInputStrategyNameListAsFilter;
+    }
+
+    /**
+     * Use more than one when multiple individual orders are associated with a single algo panel display
+     *
+     * @return the strategyFilterInputDataList
+     */
+    public List<StrategyFilterInputData> getStrategyFilterInputDataList() {
+        return this.strategyFilterInputDataList;
+    }
+
+    /**
+     * Use more than one when multiple individual orders are associated with a single algo panel display
+     *
+     * @param aStrategyFilterInputDataList the strategyFilterInputDataList to set
+     */
+    public void setStrategyFilterInputDataList(List<StrategyFilterInputData> aStrategyFilterInputDataList) {
+        this.strategyFilterInputDataList = aStrategyFilterInputDataList;
+    }
+
+    /**
+     * Convenience method for single order for algo panel.
+     *
+     * @param aStrategyFilterInputData
+     */
+    public void setStrategyFilterInputData(StrategyFilterInputData aStrategyFilterInputData) {
+        if (aStrategyFilterInputData != null) {
+            List<StrategyFilterInputData> tempList = new ArrayList<StrategyFilterInputData>();
+            tempList.add(aStrategyFilterInputData);
+            setStrategyFilterInputDataList(tempList);
+        } else {
+            setStrategyFilterInputDataList(null);
+        }
+    }
 
 }

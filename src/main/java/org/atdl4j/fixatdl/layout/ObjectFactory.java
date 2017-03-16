@@ -15,18 +15,17 @@ import javax.xml.namespace.QName;
 
 
 /**
- * This object contains factory methods for each 
- * Java content interface and Java element interface 
- * generated in the org.atdl4j.fixatdl.layout package. 
- * <p>An ObjectFactory allows you to programatically 
- * construct new instances of the Java representation 
- * for XML content. The Java representation of XML 
- * content can consist of schema derived interfaces 
- * and classes representing the binding of schema 
- * type definitions, element declarations and model 
- * groups.  Factory methods for each of these are 
+ * This object contains factory methods for each
+ * Java content interface and Java element interface
+ * generated in the org.atdl4j.fixatdl.layout package.
+ * <p>An ObjectFactory allows you to programatically
+ * construct new instances of the Java representation
+ * for XML content. The Java representation of XML
+ * content can consist of schema derived interfaces
+ * and classes representing the binding of schema
+ * type definitions, element declarations and model
+ * groups.  Factory methods for each of these are
  * provided in this class.
- * 
  */
 @XmlRegistry
 public class ObjectFactory {
@@ -35,14 +34,12 @@ public class ObjectFactory {
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.atdl4j.fixatdl.layout
-     * 
      */
     public ObjectFactory() {
     }
 
     /**
      * Create an instance of {@link ClockT }
-     * 
      */
     public ClockT createClockT() {
         return new ClockT();
@@ -50,7 +47,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link StrategyLayoutT }
-     * 
      */
     public StrategyLayoutT createStrategyLayoutT() {
         return new StrategyLayoutT();
@@ -58,7 +54,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link SliderT }
-     * 
      */
     public SliderT createSliderT() {
         return new SliderT();
@@ -66,7 +61,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link CheckBoxT }
-     * 
      */
     public CheckBoxT createCheckBoxT() {
         return new CheckBoxT();
@@ -74,7 +68,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link StrategyPanelT }
-     * 
      */
     public StrategyPanelT createStrategyPanelT() {
         return new StrategyPanelT();
@@ -82,7 +75,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DropDownListT }
-     * 
      */
     public DropDownListT createDropDownListT() {
         return new DropDownListT();
@@ -90,7 +82,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link RadioButtonListT }
-     * 
      */
     public RadioButtonListT createRadioButtonListT() {
         return new RadioButtonListT();
@@ -98,7 +89,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link RadioButtonT }
-     * 
      */
     public RadioButtonT createRadioButtonT() {
         return new RadioButtonT();
@@ -106,7 +96,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link MultiSelectListT }
-     * 
      */
     public MultiSelectListT createMultiSelectListT() {
         return new MultiSelectListT();
@@ -114,7 +103,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link CheckBoxListT }
-     * 
      */
     public CheckBoxListT createCheckBoxListT() {
         return new CheckBoxListT();
@@ -122,7 +110,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link HiddenFieldT }
-     * 
      */
     public HiddenFieldT createHiddenFieldT() {
         return new HiddenFieldT();
@@ -130,7 +117,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link SingleSpinnerT }
-     * 
      */
     public SingleSpinnerT createSingleSpinnerT() {
         return new SingleSpinnerT();
@@ -138,7 +124,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link SingleSelectListT }
-     * 
      */
     public SingleSelectListT createSingleSelectListT() {
         return new SingleSelectListT();
@@ -146,7 +131,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link EditableDropDownListT }
-     * 
      */
     public EditableDropDownListT createEditableDropDownListT() {
         return new EditableDropDownListT();
@@ -154,7 +138,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link ListItemT }
-     * 
      */
     public ListItemT createListItemT() {
         return new ListItemT();
@@ -162,7 +145,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link TextFieldT }
-     * 
      */
     public TextFieldT createTextFieldT() {
         return new TextFieldT();
@@ -170,7 +152,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DoubleSpinnerT }
-     * 
      */
     public DoubleSpinnerT createDoubleSpinnerT() {
         return new DoubleSpinnerT();
@@ -178,7 +159,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link LabelT }
-     * 
      */
     public LabelT createLabelT() {
         return new LabelT();
@@ -186,7 +166,6 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link StrategyLayoutT }{@code >}}
-     * 
      */
     @XmlElementDecl(namespace = "http://www.fixprotocol.org/FIXatdl-1-1/Layout", name = "StrategyLayout")
     public JAXBElement<StrategyLayoutT> createStrategyLayout(StrategyLayoutT value) {

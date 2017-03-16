@@ -7,26 +7,26 @@ import org.eclipse.swt.widgets.Control;
 
 public class SWTDebugMouseTrackListener implements MouseTrackListener {
 
-	private Color defaultColor;
+    private Color defaultColor;
 
-	private Color remarkColor;
+    private Color remarkColor;
 
-	private Control control;
+    private Control control;
 
-	public SWTDebugMouseTrackListener(Control control) {
-		this.control = control;
-		defaultColor = control.getParent().getBackground();
-		remarkColor = new Color(control.getDisplay(), 255, 0, 0);
-	}
+    public SWTDebugMouseTrackListener(Control control) {
+        this.control = control;
+        defaultColor = control.getParent().getBackground();
+        remarkColor = new Color(control.getDisplay(), 255, 0, 0);
+    }
 
-	public void mouseEnter(MouseEvent ev) {
-		control.getParent().setBackground(remarkColor);
-	}
+    public void mouseEnter(MouseEvent ev) {
+        control.getParent().setBackground(remarkColor);
+    }
 
-	public void mouseExit(MouseEvent ev) {
-		control.getParent().setBackground(defaultColor);
-	}
+    public void mouseExit(MouseEvent ev) {
+        control.getParent().setBackground(defaultColor);
+    }
 
-	public void mouseHover(MouseEvent ev) {
-	}
+    public void mouseHover(MouseEvent ev) {
+    }
 }

@@ -16,12 +16,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- *  Derived parameter type corresponding to the FIX "UTCDateOnly" type defined in the FIX specification.
- * 
+ * Derived parameter type corresponding to the FIX "UTCDateOnly" type defined in the FIX specification.
+ * <p>
  * <p>Java class for UTCDateOnly_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="UTCDateOnly_t">
  *   &lt;complexContent>
@@ -33,14 +33,11 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "UTCDateOnly_t")
 public class UTCDateOnlyT
-    extends ParameterT
-{
+        extends ParameterT {
 
     @XmlAttribute
     protected XMLGregorianCalendar minValue;
@@ -51,11 +48,9 @@ public class UTCDateOnlyT
 
     /**
      * Gets the value of the minValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getMinValue() {
         return minValue;
@@ -63,11 +58,9 @@ public class UTCDateOnlyT
 
     /**
      * Sets the value of the minValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setMinValue(XMLGregorianCalendar value) {
         this.minValue = value;
@@ -75,11 +68,9 @@ public class UTCDateOnlyT
 
     /**
      * Gets the value of the maxValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getMaxValue() {
         return maxValue;
@@ -87,11 +78,9 @@ public class UTCDateOnlyT
 
     /**
      * Sets the value of the maxValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setMaxValue(XMLGregorianCalendar value) {
         this.maxValue = value;
@@ -99,11 +88,9 @@ public class UTCDateOnlyT
 
     /**
      * Gets the value of the constValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getConstValue() {
         return constValue;
@@ -111,11 +98,9 @@ public class UTCDateOnlyT
 
     /**
      * Sets the value of the constValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setConstValue(XMLGregorianCalendar value) {
         this.constValue = value;

@@ -8,23 +8,17 @@
 
 package org.atdl4j.fixatdl.core;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java class for Parameter_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Parameter_t">
  *   &lt;complexContent>
@@ -49,39 +43,37 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Parameter_t", propOrder = {
-    "description",
-    "enumPair"
+        "description",
+        "enumPair"
 })
 @XmlSeeAlso({
-    LanguageT.class,
-    CountryT.class,
-    LengthT.class,
-    DataT.class,
-    StringT.class,
-    ExchangeT.class,
-    CharT.class,
-    CurrencyT.class,
-    UTCTimeOnlyT.class,
-    SeqNumT.class,
-    TagNumT.class,
-    TZTimestampT.class,
-    LocalMktDateT.class,
-    IntT.class,
-    MultipleStringValueT.class,
-    MonthYearT.class,
-    TenorT.class,
-    BooleanT.class,
-    TZTimeOnlyT.class,
-    UTCDateOnlyT.class,
-    MultipleCharValueT.class,
-    NumericT.class,
-    UTCTimestampT.class,
-    NumInGroupT.class
+        LanguageT.class,
+        CountryT.class,
+        LengthT.class,
+        DataT.class,
+        StringT.class,
+        ExchangeT.class,
+        CharT.class,
+        CurrencyT.class,
+        UTCTimeOnlyT.class,
+        SeqNumT.class,
+        TagNumT.class,
+        TZTimestampT.class,
+        LocalMktDateT.class,
+        IntT.class,
+        MultipleStringValueT.class,
+        MonthYearT.class,
+        TenorT.class,
+        BooleanT.class,
+        TZTimeOnlyT.class,
+        UTCDateOnlyT.class,
+        MultipleCharValueT.class,
+        NumericT.class,
+        UTCTimestampT.class,
+        NumInGroupT.class
 })
 public abstract class ParameterT {
 
@@ -105,11 +97,9 @@ public abstract class ParameterT {
 
     /**
      * Description of the Parameter.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDescription() {
         return description;
@@ -117,11 +107,9 @@ public abstract class ParameterT {
 
     /**
      * Sets the value of the description property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDescription(String value) {
         this.description = value;
@@ -129,25 +117,23 @@ public abstract class ParameterT {
 
     /**
      * Gets the value of the enumPair property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the enumPair property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getEnumPair().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EnumPairT }
-     * 
-     * 
      */
     public List<EnumPairT> getEnumPair() {
         if (enumPair == null) {
@@ -158,11 +144,9 @@ public abstract class ParameterT {
 
     /**
      * Gets the value of the name property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getName() {
         return name;
@@ -170,11 +154,9 @@ public abstract class ParameterT {
 
     /**
      * Sets the value of the name property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setName(String value) {
         this.name = value;
@@ -182,11 +164,9 @@ public abstract class ParameterT {
 
     /**
      * Gets the value of the fixTag property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getFixTag() {
         return fixTag;
@@ -194,11 +174,9 @@ public abstract class ParameterT {
 
     /**
      * Sets the value of the fixTag property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setFixTag(BigInteger value) {
         this.fixTag = value;
@@ -206,11 +184,9 @@ public abstract class ParameterT {
 
     /**
      * Gets the value of the use property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link UseT }
-     *     
+     *
+     * @return possible object is
+     * {@link UseT }
      */
     public UseT getUse() {
         if (use == null) {
@@ -222,11 +198,9 @@ public abstract class ParameterT {
 
     /**
      * Sets the value of the use property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link UseT }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link UseT }
      */
     public void setUse(UseT value) {
         this.use = value;
@@ -234,11 +208,9 @@ public abstract class ParameterT {
 
     /**
      * Gets the value of the mutableOnCxlRpl property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public boolean isMutableOnCxlRpl() {
         if (mutableOnCxlRpl == null) {
@@ -250,11 +222,9 @@ public abstract class ParameterT {
 
     /**
      * Sets the value of the mutableOnCxlRpl property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setMutableOnCxlRpl(Boolean value) {
         this.mutableOnCxlRpl = value;
@@ -262,11 +232,9 @@ public abstract class ParameterT {
 
     /**
      * Gets the value of the revertOnCxlRpl property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isRevertOnCxlRpl() {
         return revertOnCxlRpl;
@@ -274,11 +242,9 @@ public abstract class ParameterT {
 
     /**
      * Sets the value of the revertOnCxlRpl property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setRevertOnCxlRpl(Boolean value) {
         this.revertOnCxlRpl = value;
@@ -286,11 +252,9 @@ public abstract class ParameterT {
 
     /**
      * Gets the value of the definedByFIX property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public boolean isDefinedByFIX() {
         if (definedByFIX == null) {
@@ -302,11 +266,9 @@ public abstract class ParameterT {
 
     /**
      * Sets the value of the definedByFIX property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setDefinedByFIX(Boolean value) {
         this.definedByFIX = value;

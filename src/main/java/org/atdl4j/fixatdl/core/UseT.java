@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for Use_t.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
@@ -26,7 +26,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "Use_t")
 @XmlEnum
@@ -47,7 +46,7 @@ public enum UseT {
     }
 
     public static UseT fromValue(String v) {
-        for (UseT c: UseT.values()) {
+        for (UseT c : UseT.values()) {
             if (c.value.equals(v)) {
                 return c;
             }

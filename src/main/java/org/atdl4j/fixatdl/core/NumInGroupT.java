@@ -8,21 +8,17 @@
 
 package org.atdl4j.fixatdl.core;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * Derived parameter type corresponding to the FIX "NumInGroup" type defined in the FIX specification.
- * 
+ * <p>
  * <p>Java class for NumInGroup_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="NumInGroup_t">
  *   &lt;complexContent>
@@ -32,14 +28,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "NumInGroup_t")
 public class NumInGroupT
-    extends ParameterT
-{
+        extends ParameterT {
 
     @XmlAttribute
     @XmlSchemaType(name = "positiveInteger")
@@ -47,11 +40,9 @@ public class NumInGroupT
 
     /**
      * Gets the value of the constValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getConstValue() {
         return constValue;
@@ -59,11 +50,9 @@ public class NumInGroupT
 
     /**
      * Sets the value of the constValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setConstValue(BigInteger value) {
         this.constValue = value;

@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for Market_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Market_t">
  *   &lt;complexContent>
@@ -35,8 +35,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Market_t")
@@ -49,11 +47,9 @@ public class MarketT {
 
     /**
      * Gets the value of the micCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getMICCode() {
         return micCode;
@@ -61,11 +57,9 @@ public class MarketT {
 
     /**
      * Sets the value of the micCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setMICCode(String value) {
         this.micCode = value;
@@ -73,11 +67,9 @@ public class MarketT {
 
     /**
      * Gets the value of the inclusion property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link InclusionT }
-     *     
+     *
+     * @return possible object is
+     * {@link InclusionT }
      */
     public InclusionT getInclusion() {
         return inclusion;
@@ -85,11 +77,9 @@ public class MarketT {
 
     /**
      * Sets the value of the inclusion property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link InclusionT }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link InclusionT }
      */
     public void setInclusion(InclusionT value) {
         this.inclusion = value;

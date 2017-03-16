@@ -8,20 +8,16 @@
 
 package org.atdl4j.fixatdl.validation;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * Specifies a strategy-wide rule consisting of a boolean expression and an error message to be didsplayed when the boolean expression evaluates to False().
- * 
+ * <p>
  * <p>Java class for StrategyEdit_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="StrategyEdit_t">
  *   &lt;complexContent>
@@ -38,14 +34,12 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "StrategyEdit_t", propOrder = {
-    "description",
-    "edit",
-    "editRef"
+        "description",
+        "edit",
+        "editRef"
 })
 public class StrategyEditT {
 
@@ -60,11 +54,9 @@ public class StrategyEditT {
 
     /**
      * Optional description of the Strategy Edit.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDescription() {
         return description;
@@ -72,11 +64,9 @@ public class StrategyEditT {
 
     /**
      * Sets the value of the description property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDescription(String value) {
         this.description = value;
@@ -84,11 +74,9 @@ public class StrategyEditT {
 
     /**
      * Gets the value of the edit property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EditT }
-     *     
+     *
+     * @return possible object is
+     * {@link EditT }
      */
     public EditT getEdit() {
         return edit;
@@ -96,11 +84,9 @@ public class StrategyEditT {
 
     /**
      * Sets the value of the edit property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EditT }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EditT }
      */
     public void setEdit(EditT value) {
         this.edit = value;
@@ -108,11 +94,9 @@ public class StrategyEditT {
 
     /**
      * Gets the value of the editRef property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EditRefT }
-     *     
+     *
+     * @return possible object is
+     * {@link EditRefT }
      */
     public EditRefT getEditRef() {
         return editRef;
@@ -120,11 +104,9 @@ public class StrategyEditT {
 
     /**
      * Sets the value of the editRef property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EditRefT }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EditRefT }
      */
     public void setEditRef(EditRefT value) {
         this.editRef = value;
@@ -132,11 +114,9 @@ public class StrategyEditT {
 
     /**
      * Gets the value of the errorMessage property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getErrorMessage() {
         return errorMessage;
@@ -144,11 +124,9 @@ public class StrategyEditT {
 
     /**
      * Sets the value of the errorMessage property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setErrorMessage(String value) {
         this.errorMessage = value;

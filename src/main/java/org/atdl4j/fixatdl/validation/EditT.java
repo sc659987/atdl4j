@@ -8,22 +8,18 @@
 
 package org.atdl4j.fixatdl.validation;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * Construct used to build a boolean expression.
- * 
+ * <p>
  * <p>Java class for Edit_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Edit_t">
  *   &lt;complexContent>
@@ -43,14 +39,12 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Edit_t", propOrder = {
-    "description",
-    "edit",
-    "editRef"
+        "description",
+        "edit",
+        "editRef"
 })
 public class EditT {
 
@@ -75,11 +69,9 @@ public class EditT {
 
     /**
      * Description of the Edit.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDescription() {
         return description;
@@ -87,11 +79,9 @@ public class EditT {
 
     /**
      * Sets the value of the description property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDescription(String value) {
         this.description = value;
@@ -99,25 +89,23 @@ public class EditT {
 
     /**
      * Gets the value of the edit property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the edit property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getEdit().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EditT }
-     * 
-     * 
      */
     public List<EditT> getEdit() {
         if (edit == null) {
@@ -128,25 +116,23 @@ public class EditT {
 
     /**
      * Gets the value of the editRef property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the editRef property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getEditRef().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EditRefT }
-     * 
-     * 
      */
     public List<EditRefT> getEditRef() {
         if (editRef == null) {
@@ -157,11 +143,9 @@ public class EditT {
 
     /**
      * Gets the value of the field property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getField() {
         return field;
@@ -169,11 +153,9 @@ public class EditT {
 
     /**
      * Sets the value of the field property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setField(String value) {
         this.field = value;
@@ -181,11 +163,9 @@ public class EditT {
 
     /**
      * Gets the value of the field2 property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getField2() {
         return field2;
@@ -193,11 +173,9 @@ public class EditT {
 
     /**
      * Sets the value of the field2 property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setField2(String value) {
         this.field2 = value;
@@ -205,11 +183,9 @@ public class EditT {
 
     /**
      * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getValue() {
         return value;
@@ -217,11 +193,9 @@ public class EditT {
 
     /**
      * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setValue(String value) {
         this.value = value;
@@ -229,11 +203,9 @@ public class EditT {
 
     /**
      * Gets the value of the operator property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link OperatorT }
-     *     
+     *
+     * @return possible object is
+     * {@link OperatorT }
      */
     public OperatorT getOperator() {
         return operator;
@@ -241,11 +213,9 @@ public class EditT {
 
     /**
      * Sets the value of the operator property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link OperatorT }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link OperatorT }
      */
     public void setOperator(OperatorT value) {
         this.operator = value;
@@ -253,11 +223,9 @@ public class EditT {
 
     /**
      * Gets the value of the logicOperator property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link LogicOperatorT }
-     *     
+     *
+     * @return possible object is
+     * {@link LogicOperatorT }
      */
     public LogicOperatorT getLogicOperator() {
         return logicOperator;
@@ -265,11 +233,9 @@ public class EditT {
 
     /**
      * Sets the value of the logicOperator property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link LogicOperatorT }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link LogicOperatorT }
      */
     public void setLogicOperator(LogicOperatorT value) {
         this.logicOperator = value;
@@ -277,11 +243,9 @@ public class EditT {
 
     /**
      * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getId() {
         return id;
@@ -289,11 +253,9 @@ public class EditT {
 
     /**
      * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setId(String value) {
         this.id = value;

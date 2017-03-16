@@ -8,20 +8,20 @@
 
 package org.atdl4j.fixatdl.core;
 
-import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
+import java.math.BigInteger;
 
 
 /**
  * Derived parameter type corresponding to the FIX "Length" type defined in the FIX specification.
- * 
+ * <p>
  * <p>Java class for Length_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Length_t">
  *   &lt;complexContent>
@@ -31,25 +31,20 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Length_t")
 public class LengthT
-    extends ParameterT
-{
+        extends ParameterT {
 
     @XmlAttribute
     protected BigInteger constValue;
 
     /**
      * Gets the value of the constValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getConstValue() {
         return constValue;
@@ -57,11 +52,9 @@ public class LengthT
 
     /**
      * Sets the value of the constValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setConstValue(BigInteger value) {
         this.constValue = value;

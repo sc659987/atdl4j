@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for Label_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Label_t">
  *   &lt;complexContent>
@@ -28,25 +28,20 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Label_t")
 public class LabelT
-    extends ControlT
-{
+        extends ControlT {
 
     @XmlAttribute
     protected String initValue;
 
     /**
      * Gets the value of the initValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getInitValue() {
         return initValue;
@@ -54,11 +49,9 @@ public class LabelT
 
     /**
      * Sets the value of the initValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setInitValue(String value) {
         this.initValue = value;

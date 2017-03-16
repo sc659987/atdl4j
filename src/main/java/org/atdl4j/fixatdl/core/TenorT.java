@@ -16,11 +16,11 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Derived parameter type corresponding to the FIX "Tenor" type defined in the FIX specification.
- * 
+ * <p>
  * <p>Java class for Tenor_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Tenor_t">
  *   &lt;complexContent>
@@ -30,25 +30,20 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Tenor_t")
 public class TenorT
-    extends ParameterT
-{
+        extends ParameterT {
 
     @XmlAttribute
     protected String constValue;
 
     /**
      * Gets the value of the constValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getConstValue() {
         return constValue;
@@ -56,11 +51,9 @@ public class TenorT
 
     /**
      * Sets the value of the constValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setConstValue(String value) {
         this.constValue = value;

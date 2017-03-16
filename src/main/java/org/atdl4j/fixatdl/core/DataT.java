@@ -8,20 +8,20 @@
 
 package org.atdl4j.fixatdl.core;
 
-import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
+import java.math.BigInteger;
 
 
 /**
- *  Derived parameter type corresponding to the FIX "Data" type defined in the FIX specification.
- * 
+ * Derived parameter type corresponding to the FIX "Data" type defined in the FIX specification.
+ * <p>
  * <p>Java class for Data_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Data_t">
  *   &lt;complexContent>
@@ -33,14 +33,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Data_t")
 public class DataT
-    extends ParameterT
-{
+        extends ParameterT {
 
     @XmlAttribute
     protected BigInteger minLength;
@@ -51,11 +48,9 @@ public class DataT
 
     /**
      * Gets the value of the minLength property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getMinLength() {
         return minLength;
@@ -63,11 +58,9 @@ public class DataT
 
     /**
      * Sets the value of the minLength property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setMinLength(BigInteger value) {
         this.minLength = value;
@@ -75,11 +68,9 @@ public class DataT
 
     /**
      * Gets the value of the maxLength property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getMaxLength() {
         return maxLength;
@@ -87,11 +78,9 @@ public class DataT
 
     /**
      * Sets the value of the maxLength property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setMaxLength(BigInteger value) {
         this.maxLength = value;
@@ -99,11 +88,9 @@ public class DataT
 
     /**
      * Gets the value of the constValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getConstValue() {
         return constValue;
@@ -111,11 +98,9 @@ public class DataT
 
     /**
      * Sets the value of the constValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setConstValue(String value) {
         this.constValue = value;

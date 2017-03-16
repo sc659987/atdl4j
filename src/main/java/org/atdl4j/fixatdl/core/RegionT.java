@@ -8,20 +8,16 @@
 
 package org.atdl4j.fixatdl.core;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java class for Region_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Region_t">
  *   &lt;complexContent>
@@ -58,12 +54,10 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Region_t", propOrder = {
-    "country"
+        "country"
 })
 public class RegionT {
 
@@ -76,25 +70,23 @@ public class RegionT {
 
     /**
      * Gets the value of the country property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the country property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getCountry().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link RegionT.Country }
-     * 
-     * 
      */
     public List<RegionT.Country> getCountry() {
         if (country == null) {
@@ -105,11 +97,9 @@ public class RegionT {
 
     /**
      * Gets the value of the name property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getName() {
         return name;
@@ -117,11 +107,9 @@ public class RegionT {
 
     /**
      * Sets the value of the name property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setName(String value) {
         this.name = value;
@@ -129,11 +117,9 @@ public class RegionT {
 
     /**
      * Gets the value of the inclusion property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link InclusionT }
-     *     
+     *
+     * @return possible object is
+     * {@link InclusionT }
      */
     public InclusionT getInclusion() {
         return inclusion;
@@ -141,11 +127,9 @@ public class RegionT {
 
     /**
      * Sets the value of the inclusion property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link InclusionT }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link InclusionT }
      */
     public void setInclusion(InclusionT value) {
         this.inclusion = value;
@@ -154,9 +138,9 @@ public class RegionT {
 
     /**
      * <p>Java class for anonymous complex type.
-     * 
+     * <p>
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
+     * <p>
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -173,8 +157,6 @@ public class RegionT {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -187,11 +169,9 @@ public class RegionT {
 
         /**
          * Gets the value of the countryCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
+         *
+         * @return possible object is
+         * {@link String }
          */
         public String getCountryCode() {
             return countryCode;
@@ -199,11 +179,9 @@ public class RegionT {
 
         /**
          * Sets the value of the countryCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link String }
          */
         public void setCountryCode(String value) {
             this.countryCode = value;
@@ -211,11 +189,9 @@ public class RegionT {
 
         /**
          * Gets the value of the inclusion property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link InclusionT }
-         *     
+         *
+         * @return possible object is
+         * {@link InclusionT }
          */
         public InclusionT getInclusion() {
             return inclusion;
@@ -223,11 +199,9 @@ public class RegionT {
 
         /**
          * Sets the value of the inclusion property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link InclusionT }
-         *     
+         *
+         * @param value allowed object is
+         *              {@link InclusionT }
          */
         public void setInclusion(InclusionT value) {
             this.inclusion = value;

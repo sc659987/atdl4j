@@ -1,189 +1,163 @@
 package org.atdl4j.ui.swing.widget;
 
-import java.awt.Component;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Vector;
-
-import javax.swing.JLabel;
-import javax.swing.JList;
-import javax.swing.ListSelectionModel;
-
 import org.atdl4j.fixatdl.layout.ListItemT;
 import org.atdl4j.fixatdl.layout.MultiSelectListT;
 import org.atdl4j.fixatdl.layout.SingleSelectListT;
 import org.atdl4j.ui.impl.ControlHelper;
 import org.atdl4j.ui.swing.SwingListener;
 
+import javax.swing.*;
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Vector;
+
 public class SwingListBoxWidget
-		extends AbstractSwingWidget<String>
-{
-	private JList listBox;
-	private JLabel label;
-	private Vector<String> list = new Vector<String>();
+        extends AbstractSwingWidget<String> {
+    private JList listBox;
+    private JLabel label;
+    private Vector<String> list = new Vector<String>();
 
-	public String getControlValueRaw()
-	{
-		String value = "";
-		List<ListItemT> listItems = control instanceof MultiSelectListT ? ( (MultiSelectListT) control ).getListItem()
-				: ( (SingleSelectListT) control ).getListItem();
-		int[] selection = listBox.getSelectedIndices();
+    public String getControlValueRaw() {
+        String value = "";
+        List<ListItemT> listItems = control instanceof MultiSelectListT ? ((MultiSelectListT) control).getListItem()
+                : ((SingleSelectListT) control).getListItem();
+        int[] selection = listBox.getSelectedIndices();
 
-		for ( int i = 0; i < selection.length; i++ )
-		{
-			value += listItems.get( selection[ i ] ).getEnumID();
-			if ( i + 1 != selection.length )
-				value += " ";
-		}
-		return "".equals( value ) ? null : value;
-	}
+        for (int i = 0; i < selection.length; i++) {
+            value += listItems.get(selection[i]).getEnumID();
+            if (i + 1 != selection.length)
+                value += " ";
+        }
+        return "".equals(value) ? null : value;
+    }
 
-	public String getParameterValue()
-	{
-		// Helper method from AbstractControlUI
-		return getParameterValueAsMultipleValueString();
-	}
+    public String getParameterValue() {
+        // Helper method from AbstractControlUI
+        return getParameterValueAsMultipleValueString();
+    }
 
-	public void setValue(String value)
-	{
-		this.setValue( value, false );
-	}
+    public void setValue(String value) {
+        this.setValue(value, false);
+    }
 
-	public void setValue(String value, boolean setValueAsControl)
-	{
-		// split string by spaces in case of MultiSelectList
-		List<String> values = Arrays.asList( value.split( "\\s" ) );
-		for ( String singleValue : values )
-		{
-			for ( int i = 0; i < getListItems().size(); i++ )
-			{
-				if ( setValueAsControl || parameter == null )
-				{
-					if ( getListItems().get( i ).getEnumID().equals( singleValue ) )
-					{
-						listBox.setSelectedIndex( i );
-						break;
-					}
-				}
-				else
-				{
-					if ( parameter.getEnumPair().get( i ).getWireValue().equals( singleValue ) )
-					{
-						listBox.setSelectedIndex( i );
-						break;
-					}
-				}
-			}
-		}
-	}
-	
-	public List<Component> getComponents() {
-		List<Component> widgets = new ArrayList<Component>();
-		if (label != null) widgets.add(label);
-		widgets.add(listBox);
-		return widgets;
-	}
+    public void setValue(String value, boolean setValueAsControl) {
+        // split string by spaces in case of MultiSelectList
+        List<String> values = Arrays.asList(value.split("\\s"));
+        for (String singleValue : values) {
+            for (int i = 0; i < getListItems().size(); i++) {
+                if (setValueAsControl || parameter == null) {
+                    if (getListItems().get(i).getEnumID().equals(singleValue)) {
+                        listBox.setSelectedIndex(i);
+                        break;
+                    }
+                } else {
+                    if (parameter.getEnumPair().get(i).getWireValue().equals(singleValue)) {
+                        listBox.setSelectedIndex(i);
+                        break;
+                    }
+                }
+            }
+        }
+    }
 
-	public List<Component> getComponentsExcludingLabel()
-	{
-		List<Component> widgets = new ArrayList<Component>();
-		widgets.add( listBox );
-		return widgets;
-	}
-	
-	public void addListener(SwingListener listener) {
-		listBox.addListSelectionListener(listener);
-	}
+    public List<Component> getComponents() {
+        List<Component> widgets = new ArrayList<Component>();
+        if (label != null) widgets.add(label);
+        widgets.add(listBox);
+        return widgets;
+    }
 
-	public void removeListener(SwingListener listener) {
-		listBox.removeListSelectionListener(listener);
-	}
-	
-	
-	/* (non-Javadoc)
-	 * @see org.atdl4j.ui.ControlUI#reinit()
-	 */
-	@Override
-	public void processReinit( Object aControlInitValue )
-	{
-		if ( listBox != null )
-		{
-			if ( aControlInitValue != null )
-			{
-				// -- apply initValue if one has been specified --
-				setValue( (String) aControlInitValue, true );
-			}
-			else
-			{
-				// -- set to first when no initValue exists --
-				if ( list.size() > 0 )
-				{
-					listBox.setSelectedIndex( 0 );
-				}
-			}
-		}
-	}
+    public List<Component> getComponentsExcludingLabel() {
+        List<Component> widgets = new ArrayList<Component>();
+        widgets.add(listBox);
+        return widgets;
+    }
 
-	
-	
-	/* (non-Javadoc)
-	 * @see org.atdl4j.ui.impl.AbstractAtdl4jWidget#applyConstOrInitValues()
-	 */
-	@Override
-	public void applyConstOrInitValues() {
-		super.applyConstOrInitValues();
-		listBox.revalidate();
-	}
+    public void addListener(SwingListener listener) {
+        listBox.addListSelectionListener(listener);
+    }
 
-	/* 
-	 * 
-	 */
-	protected void processNullValueIndicatorChange(Boolean aOldNullValueInd, Boolean aNewNullValueInd)
-	{
-		// TODO ?? adjust the visual appearance of the control ??
-	}
-	
-	@Override
-	protected List< ? extends Component> createBrickComponents() {
-	  
-	  List<Component> components = new ArrayList<Component>();
-	  
-	  String tooltip = getTooltip();
+    public void removeListener(SwingListener listener) {
+        listBox.removeListSelectionListener(listener);
+    }
 
-      // label
-      if ( control.getLabel() != null ) {
-          label = new JLabel();
-          label.setName(getName()+"/label");          
-          label.setText( control.getLabel() );
-          if ( tooltip != null ) label.setToolTipText( tooltip );
-          components.add(label);
-      }
 
-      // listbox
-      listBox =  new JList(list);
-      if (control instanceof MultiSelectListT) {
-          listBox.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-      } else if (control instanceof SingleSelectListT) {
-          listBox.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-      }
-      listBox.setName(getName()+"/listbox");
-      
-      // listBox items
-      java.util.List<ListItemT> listItems = control instanceof MultiSelectListT ? ( (MultiSelectListT) control ).getListItem()
-              : ( (SingleSelectListT) control ).getListItem();
-      for ( ListItemT listItem : listItems )
-      {
-          list.add(listItem.getUiRep() != null ? listItem.getUiRep() : "");
-      }
+    /* (non-Javadoc)
+     * @see org.atdl4j.ui.ControlUI#reinit()
+     */
+    @Override
+    public void processReinit(Object aControlInitValue) {
+        if (listBox != null) {
+            if (aControlInitValue != null) {
+                // -- apply initValue if one has been specified --
+                setValue((String) aControlInitValue, true);
+            } else {
+                // -- set to first when no initValue exists --
+                if (list.size() > 0) {
+                    listBox.setSelectedIndex(0);
+                }
+            }
+        }
+    }
 
-      // tooltip
-      if ( tooltip != null ) listBox.setToolTipText( tooltip );
 
-      // init value
-      String initValue = (String) ControlHelper.getInitValue( control, getAtdl4jOptions() );
-      if ( initValue != null ) setValue( initValue, true );
-      
-      return components;
-	}
+    /* (non-Javadoc)
+     * @see org.atdl4j.ui.impl.AbstractAtdl4jWidget#applyConstOrInitValues()
+     */
+    @Override
+    public void applyConstOrInitValues() {
+        super.applyConstOrInitValues();
+        listBox.revalidate();
+    }
+
+    /*
+     *
+     */
+    protected void processNullValueIndicatorChange(Boolean aOldNullValueInd, Boolean aNewNullValueInd) {
+        // TODO ?? adjust the visual appearance of the control ??
+    }
+
+    @Override
+    protected List<? extends Component> createBrickComponents() {
+
+        List<Component> components = new ArrayList<Component>();
+
+        String tooltip = getTooltip();
+
+        // label
+        if (control.getLabel() != null) {
+            label = new JLabel();
+            label.setName(getName() + "/label");
+            label.setText(control.getLabel());
+            if (tooltip != null) label.setToolTipText(tooltip);
+            components.add(label);
+        }
+
+        // listbox
+        listBox = new JList(list);
+        if (control instanceof MultiSelectListT) {
+            listBox.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        } else if (control instanceof SingleSelectListT) {
+            listBox.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        }
+        listBox.setName(getName() + "/listbox");
+
+        // listBox items
+        java.util.List<ListItemT> listItems = control instanceof MultiSelectListT ? ((MultiSelectListT) control).getListItem()
+                : ((SingleSelectListT) control).getListItem();
+        for (ListItemT listItem : listItems) {
+            list.add(listItem.getUiRep() != null ? listItem.getUiRep() : "");
+        }
+
+        // tooltip
+        if (tooltip != null) listBox.setToolTipText(tooltip);
+
+        // init value
+        String initValue = (String) ControlHelper.getInitValue(control, getAtdl4jOptions());
+        if (initValue != null) setValue(initValue, true);
+
+        return components;
+    }
 }

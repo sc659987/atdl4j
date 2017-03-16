@@ -8,20 +8,15 @@
 
 package org.atdl4j.fixatdl.core;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java class for EnumPair_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="EnumPair_t">
  *   &lt;complexContent>
@@ -42,12 +37,10 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "EnumPair_t", propOrder = {
-    "description"
+        "description"
 })
 public class EnumPairT {
 
@@ -63,11 +56,9 @@ public class EnumPairT {
 
     /**
      * Description of the EnumPair in a given collection of EnumPairs.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDescription() {
         return description;
@@ -75,11 +66,9 @@ public class EnumPairT {
 
     /**
      * Sets the value of the description property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDescription(String value) {
         this.description = value;
@@ -87,11 +76,9 @@ public class EnumPairT {
 
     /**
      * Gets the value of the enumID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getEnumID() {
         return enumID;
@@ -99,11 +86,9 @@ public class EnumPairT {
 
     /**
      * Sets the value of the enumID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setEnumID(String value) {
         this.enumID = value;
@@ -111,11 +96,9 @@ public class EnumPairT {
 
     /**
      * Gets the value of the wireValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getWireValue() {
         return wireValue;
@@ -123,11 +106,9 @@ public class EnumPairT {
 
     /**
      * Sets the value of the wireValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setWireValue(String value) {
         this.wireValue = value;
@@ -135,11 +116,9 @@ public class EnumPairT {
 
     /**
      * Gets the value of the index property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getIndex() {
         return index;
@@ -147,11 +126,9 @@ public class EnumPairT {
 
     /**
      * Sets the value of the index property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setIndex(BigInteger value) {
         this.index = value;

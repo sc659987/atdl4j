@@ -8,21 +8,17 @@
 
 package org.atdl4j.fixatdl.core;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * Derived parameter type corresponding to the FIX "TZTimestamp" type defined in the FIX specification.
- * 
+ * <p>
  * <p>Java class for TZTimestamp_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="TZTimestamp_t">
  *   &lt;complexContent>
@@ -34,14 +30,11 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TZTimestamp_t")
 public class TZTimestampT
-    extends ParameterT
-{
+        extends ParameterT {
 
     @XmlAttribute
     @XmlSchemaType(name = "time")
@@ -55,11 +48,9 @@ public class TZTimestampT
 
     /**
      * Gets the value of the minValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getMinValue() {
         return minValue;
@@ -67,11 +58,9 @@ public class TZTimestampT
 
     /**
      * Sets the value of the minValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setMinValue(XMLGregorianCalendar value) {
         this.minValue = value;
@@ -79,11 +68,9 @@ public class TZTimestampT
 
     /**
      * Gets the value of the maxValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getMaxValue() {
         return maxValue;
@@ -91,11 +78,9 @@ public class TZTimestampT
 
     /**
      * Sets the value of the maxValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setMaxValue(XMLGregorianCalendar value) {
         this.maxValue = value;
@@ -103,11 +88,9 @@ public class TZTimestampT
 
     /**
      * Gets the value of the constValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getConstValue() {
         return constValue;
@@ -115,11 +98,9 @@ public class TZTimestampT
 
     /**
      * Sets the value of the constValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setConstValue(XMLGregorianCalendar value) {
         this.constValue = value;

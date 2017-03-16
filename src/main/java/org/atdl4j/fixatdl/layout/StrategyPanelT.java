@@ -8,20 +8,16 @@
 
 package org.atdl4j.fixatdl.layout;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>Java class for StrategyPanel_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="StrategyPanel_t">
  *   &lt;complexContent>
@@ -40,13 +36,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "StrategyPanel_t", propOrder = {
-    "strategyPanel",
-    "control"
+        "strategyPanel",
+        "control"
 })
 public class StrategyPanelT {
 
@@ -69,25 +63,23 @@ public class StrategyPanelT {
 
     /**
      * Gets the value of the strategyPanel property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the strategyPanel property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getStrategyPanel().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link StrategyPanelT }
-     * 
-     * 
      */
     public List<StrategyPanelT> getStrategyPanel() {
         if (strategyPanel == null) {
@@ -98,25 +90,23 @@ public class StrategyPanelT {
 
     /**
      * Gets the value of the control property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the control property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getControl().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ControlT }
-     * 
-     * 
      */
     public List<ControlT> getControl() {
         if (control == null) {
@@ -127,11 +117,9 @@ public class StrategyPanelT {
 
     /**
      * Gets the value of the title property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTitle() {
         return title;
@@ -139,11 +127,9 @@ public class StrategyPanelT {
 
     /**
      * Sets the value of the title property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTitle(String value) {
         this.title = value;
@@ -151,11 +137,9 @@ public class StrategyPanelT {
 
     /**
      * Gets the value of the collapsed property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public boolean isCollapsed() {
         if (collapsed == null) {
@@ -167,11 +151,9 @@ public class StrategyPanelT {
 
     /**
      * Sets the value of the collapsed property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setCollapsed(Boolean value) {
         this.collapsed = value;
@@ -179,11 +161,9 @@ public class StrategyPanelT {
 
     /**
      * Gets the value of the collapsible property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public boolean isCollapsible() {
         if (collapsible == null) {
@@ -195,11 +175,9 @@ public class StrategyPanelT {
 
     /**
      * Sets the value of the collapsible property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setCollapsible(Boolean value) {
         this.collapsible = value;
@@ -207,11 +185,9 @@ public class StrategyPanelT {
 
     /**
      * Gets the value of the color property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getColor() {
         return color;
@@ -219,11 +195,9 @@ public class StrategyPanelT {
 
     /**
      * Sets the value of the color property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setColor(String value) {
         this.color = value;
@@ -231,11 +205,9 @@ public class StrategyPanelT {
 
     /**
      * Gets the value of the orientation property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PanelOrientationT }
-     *     
+     *
+     * @return possible object is
+     * {@link PanelOrientationT }
      */
     public PanelOrientationT getOrientation() {
         return orientation;
@@ -243,11 +215,9 @@ public class StrategyPanelT {
 
     /**
      * Sets the value of the orientation property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PanelOrientationT }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PanelOrientationT }
      */
     public void setOrientation(PanelOrientationT value) {
         this.orientation = value;
@@ -255,11 +225,9 @@ public class StrategyPanelT {
 
     /**
      * Gets the value of the border property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BorderT }
-     *     
+     *
+     * @return possible object is
+     * {@link BorderT }
      */
     public BorderT getBorder() {
         return border;
@@ -267,11 +235,9 @@ public class StrategyPanelT {
 
     /**
      * Sets the value of the border property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BorderT }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BorderT }
      */
     public void setBorder(BorderT value) {
         this.border = value;

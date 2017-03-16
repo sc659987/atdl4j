@@ -8,20 +8,17 @@
 
 package org.atdl4j.fixatdl.layout;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 import org.atdl4j.fixatdl.timezones.Timezone;
+
+import javax.xml.bind.annotation.*;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * <p>Java class for Clock_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Clock_t">
  *   &lt;complexContent>
@@ -40,14 +37,11 @@ import org.atdl4j.fixatdl.timezones.Timezone;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Clock_t")
 public class ClockT
-    extends ControlT
-{
+        extends ControlT {
 
     @XmlAttribute
     @XmlSchemaType(name = "time")
@@ -59,11 +53,9 @@ public class ClockT
 
     /**
      * Gets the value of the initValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getInitValue() {
         return initValue;
@@ -71,11 +63,9 @@ public class ClockT
 
     /**
      * Sets the value of the initValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setInitValue(XMLGregorianCalendar value) {
         this.initValue = value;
@@ -83,15 +73,13 @@ public class ClockT
 
     /**
      * Gets the value of the initValueMode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     *
+     * @return possible object is
+     * {@link Integer }
      */
     public int getInitValueMode() {
         if (initValueMode == null) {
-            return  0;
+            return 0;
         } else {
             return initValueMode;
         }
@@ -99,11 +87,9 @@ public class ClockT
 
     /**
      * Sets the value of the initValueMode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Integer }
      */
     public void setInitValueMode(Integer value) {
         this.initValueMode = value;
@@ -111,11 +97,9 @@ public class ClockT
 
     /**
      * Gets the value of the localMktTz property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Timezone }
-     *     
+     *
+     * @return possible object is
+     * {@link Timezone }
      */
     public Timezone getLocalMktTz() {
         return localMktTz;
@@ -123,11 +107,9 @@ public class ClockT
 
     /**
      * Sets the value of the localMktTz property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Timezone }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Timezone }
      */
     public void setLocalMktTz(Timezone value) {
         this.localMktTz = value;

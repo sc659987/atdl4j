@@ -8,51 +8,44 @@ package org.atdl4j.ui.impl;
  * Use HiddenField if you'd like to have control associated with a parameter. 
  */
 
-public abstract class AbstractLabelWidget extends AbstractAtdl4jWidget<String> 
-{
-	// -- Overriden --
-	protected void initPreCheck()
-	{
-		this.parameter = null;
-	}
-	
-	public void setValue(String value) {
-		// do nothing
-	}
-	
+public abstract class AbstractLabelWidget extends AbstractAtdl4jWidget<String> {
+    // -- Overriden --
+    protected void initPreCheck() {
+        this.parameter = null;
+    }
 
-	public String getControlValueRaw() 
-	{
-		return null; // Labels cannot store values
-	}
+    public void setValue(String value) {
+        // do nothing
+    }
 
-	public Object getParameterValue() {
-		return null; // Labels cannot store values
-	}
-	
-	/* 
-	 * 
-	 */
-	protected void processNullValueIndicatorChange(Boolean aOldNullValueInd, Boolean aNewNullValueInd)
-	{
-		// Do nothing (do not need to adjust appearance of the control)
-	}
 
-	/**
-	 * 
-	 */
-	public void processConstValueHasBeenSet()
-	{
-		// -- no operation -- 
-	}
+    public String getControlValueRaw() {
+        return null; // Labels cannot store values
+    }
 
-	public boolean isControlExcludingLabelEnabled()
-	{
-		return isEnabled();
-	}
+    public Object getParameterValue() {
+        return null; // Labels cannot store values
+    }
 
-	public void setControlExcludingLabelEnabled(boolean aEnabled)
-	{
-		setEnabled( aEnabled );
-	}
+    /*
+     *
+     */
+    protected void processNullValueIndicatorChange(Boolean aOldNullValueInd, Boolean aNewNullValueInd) {
+        // Do nothing (do not need to adjust appearance of the control)
+    }
+
+    /**
+     *
+     */
+    public void processConstValueHasBeenSet() {
+        // -- no operation --
+    }
+
+    public boolean isControlExcludingLabelEnabled() {
+        return isEnabled();
+    }
+
+    public void setControlExcludingLabelEnabled(boolean aEnabled) {
+        setEnabled(aEnabled);
+    }
 }

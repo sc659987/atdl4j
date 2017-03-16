@@ -4,9 +4,6 @@
  */
 package org.atdl4j.ui.app.impl;
 
-import java.util.List;
-import java.util.Vector;
-
 import org.atdl4j.config.Atdl4jConfig;
 import org.atdl4j.config.Atdl4jOptions;
 import org.atdl4j.config.InputAndFilterData;
@@ -16,131 +13,118 @@ import org.atdl4j.ui.app.Atdl4jInputAndFilterDataPanelListener;
 import org.atdl4j.ui.app.Atdl4jInputAndFilterDataSelectionPanel;
 import org.atdl4j.ui.app.Atdl4jUserMessageHandler;
 
+import java.util.List;
+import java.util.Vector;
+
 /**
  * Represents the base, non-GUI specific component used to invoke Atdl4jInputAndFilterDataPanel pop-up.
- * 
+ *
  * @author Scott Atwell
  * @version 1.0, Mar 1, 2010
  */
 public abstract class AbstractAtdl4jInputAndFilterDataSelectionPanel
-	implements Atdl4jInputAndFilterDataSelectionPanel,
-		Atdl4jInputAndFilterDataPanelListener
-{
-	Atdl4jOptions atdl4jOptions;
-	Object parentOrShell;  // SWT: Shell, Swing: JFrame, JDialog, etc
-	
-	private Atdl4jInputAndFilterDataPanel atdl4jInputAndFilterDataPanel;
+        implements Atdl4jInputAndFilterDataSelectionPanel,
+        Atdl4jInputAndFilterDataPanelListener {
+    Atdl4jOptions atdl4jOptions;
+    Object parentOrShell;  // SWT: Shell, Swing: JFrame, JDialog, etc
 
-	private List<Atdl4jInputAndFilterDataPanelListener> listenerList = new Vector<Atdl4jInputAndFilterDataPanelListener>();
+    private Atdl4jInputAndFilterDataPanel atdl4jInputAndFilterDataPanel;
 
-	private Atdl4jUserMessageHandler atdl4jUserMessageHandler;
-	
-	protected void init( Object aParentOrShell, Atdl4jOptions aAtdl4jOptions, Atdl4jUserMessageHandler aAtdl4jUserMessageHandler )
-	{
-		setAtdl4jOptions( aAtdl4jOptions );
-		setParentOrShell( aParentOrShell );
-		
-		setAtdl4jUserMessageHandler( aAtdl4jUserMessageHandler );
-		
-		// -- FixMsgLoadPanel (Load Message button/text field) - build() method called via concrete class --
-		setAtdl4jInputAndFilterDataPanel( getAtdl4jInputAndFilterDataPanel() );
-		getAtdl4jInputAndFilterDataPanel().addListener( this );
-	}
+    private List<Atdl4jInputAndFilterDataPanelListener> listenerList = new Vector<Atdl4jInputAndFilterDataPanelListener>();
 
-	/**
-	 * @return the atdl4jOptions
-	 */
-	public Atdl4jOptions getAtdl4jOptions()
-	{
-		return this.atdl4jOptions;
-	}
+    private Atdl4jUserMessageHandler atdl4jUserMessageHandler;
 
-	/**
-	 * @param aAtdl4jOptions the atdl4jOptions to set
-	 */
-	private void setAtdl4jOptions(Atdl4jOptions aAtdl4jOptions)
-	{
-		this.atdl4jOptions = aAtdl4jOptions;
-	}
+    protected void init(Object aParentOrShell, Atdl4jOptions aAtdl4jOptions, Atdl4jUserMessageHandler aAtdl4jUserMessageHandler) {
+        setAtdl4jOptions(aAtdl4jOptions);
+        setParentOrShell(aParentOrShell);
 
-	/**
-	 * @return the parentOrShell
-	 */
-	public Object getParentOrShell()
-	{
-		return this.parentOrShell;
-	}
+        setAtdl4jUserMessageHandler(aAtdl4jUserMessageHandler);
 
-	/**
-	 * @param aParentOrShell the parentOrShell to set
-	 */
-	private void setParentOrShell(Object aParentOrShell)
-	{
-		this.parentOrShell = aParentOrShell;
-	}
-	
+        // -- FixMsgLoadPanel (Load Message button/text field) - build() method called via concrete class --
+        setAtdl4jInputAndFilterDataPanel(getAtdl4jInputAndFilterDataPanel());
+        getAtdl4jInputAndFilterDataPanel().addListener(this);
+    }
 
-	public void addListener( Atdl4jInputAndFilterDataPanelListener aAtdl4jInputAndFilterCriteriaPanelListener )
-	{
-		listenerList.add( aAtdl4jInputAndFilterCriteriaPanelListener );
-	}
+    /**
+     * @return the atdl4jOptions
+     */
+    public Atdl4jOptions getAtdl4jOptions() {
+        return this.atdl4jOptions;
+    }
 
-	public void removeListener( Atdl4jInputAndFilterDataPanelListener aAtdl4jInputAndFilterCriteriaPanelListener )
-	{
-		listenerList.remove( aAtdl4jInputAndFilterCriteriaPanelListener );
-	}	
-	
-	protected void fireInputAndFilterDataSpecifiedEvent( InputAndFilterData aInputAndFilterData )
-	{
-		for ( Atdl4jInputAndFilterDataPanelListener tempListener : listenerList )
-		{
-			tempListener.inputAndFilterDataSpecified( aInputAndFilterData );
-		}
-	}
-	
-	/**
-	 * @param atdl4jInputAndFilterDataPanel the atdl4jInputAndFilterDataPanel to set
-	 */
-	public void setAtdl4jInputAndFilterDataPanel(Atdl4jInputAndFilterDataPanel atdl4jInputAndFilterDataPanel)
-	{
-		this.atdl4jInputAndFilterDataPanel = atdl4jInputAndFilterDataPanel;
-	}
+    /**
+     * @param aAtdl4jOptions the atdl4jOptions to set
+     */
+    private void setAtdl4jOptions(Atdl4jOptions aAtdl4jOptions) {
+        this.atdl4jOptions = aAtdl4jOptions;
+    }
 
-	/* 
-	 * Re-fire to listeners who have registered with us.
-	 */
-	public void inputAndFilterDataSpecified(InputAndFilterData aInputAndFilterData)
-	{
-		fireInputAndFilterDataSpecifiedEvent( aInputAndFilterData );
-	}
-	
-	
-	/**
-	 * @return the Atdl4jInputAndFilterDataPanel
-	 * @throws Atdl4jClassLoadException 
-	 */
-	public Atdl4jInputAndFilterDataPanel getAtdl4jInputAndFilterDataPanel() 
-	{
-		if ( atdl4jInputAndFilterDataPanel == null )
-		{
-		    atdl4jInputAndFilterDataPanel = Atdl4jConfig.getConfig().createAtdl4jInputAndFilterDataPanel();
-		}		
-		return atdl4jInputAndFilterDataPanel;
-	}
+    /**
+     * @return the parentOrShell
+     */
+    public Object getParentOrShell() {
+        return this.parentOrShell;
+    }
 
-	/**
-	 * @return the atdl4jUserMessageHandler
-	 */
-	protected Atdl4jUserMessageHandler getAtdl4jUserMessageHandler()
-	{
-		return this.atdl4jUserMessageHandler;
-	}
+    /**
+     * @param aParentOrShell the parentOrShell to set
+     */
+    private void setParentOrShell(Object aParentOrShell) {
+        this.parentOrShell = aParentOrShell;
+    }
 
-	/**
-	 * @param aAtdl4jUserMessageHandler the atdl4jUserMessageHandler to set
-	 */
-	protected void setAtdl4jUserMessageHandler(Atdl4jUserMessageHandler aAtdl4jUserMessageHandler)
-	{
-		this.atdl4jUserMessageHandler = aAtdl4jUserMessageHandler;
-	}
+
+    public void addListener(Atdl4jInputAndFilterDataPanelListener aAtdl4jInputAndFilterCriteriaPanelListener) {
+        listenerList.add(aAtdl4jInputAndFilterCriteriaPanelListener);
+    }
+
+    public void removeListener(Atdl4jInputAndFilterDataPanelListener aAtdl4jInputAndFilterCriteriaPanelListener) {
+        listenerList.remove(aAtdl4jInputAndFilterCriteriaPanelListener);
+    }
+
+    protected void fireInputAndFilterDataSpecifiedEvent(InputAndFilterData aInputAndFilterData) {
+        for (Atdl4jInputAndFilterDataPanelListener tempListener : listenerList) {
+            tempListener.inputAndFilterDataSpecified(aInputAndFilterData);
+        }
+    }
+
+    /**
+     * @param atdl4jInputAndFilterDataPanel the atdl4jInputAndFilterDataPanel to set
+     */
+    public void setAtdl4jInputAndFilterDataPanel(Atdl4jInputAndFilterDataPanel atdl4jInputAndFilterDataPanel) {
+        this.atdl4jInputAndFilterDataPanel = atdl4jInputAndFilterDataPanel;
+    }
+
+    /*
+     * Re-fire to listeners who have registered with us.
+     */
+    public void inputAndFilterDataSpecified(InputAndFilterData aInputAndFilterData) {
+        fireInputAndFilterDataSpecifiedEvent(aInputAndFilterData);
+    }
+
+
+    /**
+     * @return the Atdl4jInputAndFilterDataPanel
+     * @throws Atdl4jClassLoadException
+     */
+    public Atdl4jInputAndFilterDataPanel getAtdl4jInputAndFilterDataPanel() {
+        if (atdl4jInputAndFilterDataPanel == null) {
+            atdl4jInputAndFilterDataPanel = Atdl4jConfig.getConfig().createAtdl4jInputAndFilterDataPanel();
+        }
+        return atdl4jInputAndFilterDataPanel;
+    }
+
+    /**
+     * @return the atdl4jUserMessageHandler
+     */
+    protected Atdl4jUserMessageHandler getAtdl4jUserMessageHandler() {
+        return this.atdl4jUserMessageHandler;
+    }
+
+    /**
+     * @param aAtdl4jUserMessageHandler the atdl4jUserMessageHandler to set
+     */
+    protected void setAtdl4jUserMessageHandler(Atdl4jUserMessageHandler aAtdl4jUserMessageHandler) {
+        this.atdl4jUserMessageHandler = aAtdl4jUserMessageHandler;
+    }
 }

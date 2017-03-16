@@ -8,20 +8,17 @@
 
 package org.atdl4j.fixatdl.flow;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 import org.atdl4j.fixatdl.validation.EditRefT;
 import org.atdl4j.fixatdl.validation.EditT;
+
+import javax.xml.bind.annotation.*;
 
 
 /**
  * <p>Java class for StateRule_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="StateRule_t">
  *   &lt;complexContent>
@@ -40,14 +37,12 @@ import org.atdl4j.fixatdl.validation.EditT;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "StateRule_t", propOrder = {
-    "description",
-    "edit",
-    "editRef"
+        "description",
+        "edit",
+        "editRef"
 })
 public class StateRuleT {
 
@@ -66,11 +61,9 @@ public class StateRuleT {
 
     /**
      * Description of the State Rule.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDescription() {
         return description;
@@ -78,11 +71,9 @@ public class StateRuleT {
 
     /**
      * Sets the value of the description property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDescription(String value) {
         this.description = value;
@@ -90,11 +81,9 @@ public class StateRuleT {
 
     /**
      * Gets the value of the edit property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EditT }
-     *     
+     *
+     * @return possible object is
+     * {@link EditT }
      */
     public EditT getEdit() {
         return edit;
@@ -102,11 +91,9 @@ public class StateRuleT {
 
     /**
      * Sets the value of the edit property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EditT }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EditT }
      */
     public void setEdit(EditT value) {
         this.edit = value;
@@ -114,11 +101,9 @@ public class StateRuleT {
 
     /**
      * Gets the value of the editRef property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EditRefT }
-     *     
+     *
+     * @return possible object is
+     * {@link EditRefT }
      */
     public EditRefT getEditRef() {
         return editRef;
@@ -126,11 +111,9 @@ public class StateRuleT {
 
     /**
      * Sets the value of the editRef property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EditRefT }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EditRefT }
      */
     public void setEditRef(EditRefT value) {
         this.editRef = value;
@@ -138,11 +121,9 @@ public class StateRuleT {
 
     /**
      * Gets the value of the enabled property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isEnabled() {
         return enabled;
@@ -150,11 +131,9 @@ public class StateRuleT {
 
     /**
      * Sets the value of the enabled property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setEnabled(Boolean value) {
         this.enabled = value;
@@ -162,11 +141,9 @@ public class StateRuleT {
 
     /**
      * Gets the value of the visible property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isVisible() {
         return visible;
@@ -174,11 +151,9 @@ public class StateRuleT {
 
     /**
      * Sets the value of the visible property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setVisible(Boolean value) {
         this.visible = value;
@@ -186,11 +161,9 @@ public class StateRuleT {
 
     /**
      * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getValue() {
         return value;
@@ -198,11 +171,9 @@ public class StateRuleT {
 
     /**
      * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setValue(String value) {
         this.value = value;

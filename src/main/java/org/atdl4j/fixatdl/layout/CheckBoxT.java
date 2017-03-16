@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for CheckBox_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="CheckBox_t">
  *   &lt;complexContent>
@@ -30,14 +30,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CheckBox_t")
 public class CheckBoxT
-    extends ControlT
-{
+        extends ControlT {
 
     @XmlAttribute
     protected Boolean initValue;
@@ -48,11 +45,9 @@ public class CheckBoxT
 
     /**
      * Gets the value of the initValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isInitValue() {
         return initValue;
@@ -60,11 +55,9 @@ public class CheckBoxT
 
     /**
      * Sets the value of the initValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setInitValue(Boolean value) {
         this.initValue = value;
@@ -72,11 +65,9 @@ public class CheckBoxT
 
     /**
      * Gets the value of the checkedEnumRef property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getCheckedEnumRef() {
         return checkedEnumRef;
@@ -84,11 +75,9 @@ public class CheckBoxT
 
     /**
      * Sets the value of the checkedEnumRef property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setCheckedEnumRef(String value) {
         this.checkedEnumRef = value;
@@ -96,11 +85,9 @@ public class CheckBoxT
 
     /**
      * Gets the value of the uncheckedEnumRef property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getUncheckedEnumRef() {
         return uncheckedEnumRef;
@@ -108,11 +95,9 @@ public class CheckBoxT
 
     /**
      * Sets the value of the uncheckedEnumRef property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setUncheckedEnumRef(String value) {
         this.uncheckedEnumRef = value;

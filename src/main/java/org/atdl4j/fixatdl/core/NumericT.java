@@ -8,22 +8,17 @@
 
 package org.atdl4j.fixatdl.core;
 
+import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
- *  Abstract parameter from which other parameters are derived.
- * 
+ * Abstract parameter from which other parameters are derived.
+ * <p>
  * <p>Java class for Numeric_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Numeric_t">
  *   &lt;complexContent>
@@ -33,22 +28,19 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Numeric_t")
 @XmlSeeAlso({
-    FloatT.class,
-    PriceT.class,
-    AmtT.class,
-    PercentageT.class,
-    QtyT.class,
-    PriceOffsetT.class
+        FloatT.class,
+        PriceT.class,
+        AmtT.class,
+        PercentageT.class,
+        QtyT.class,
+        PriceOffsetT.class
 })
 public class NumericT
-    extends ParameterT
-{
+        extends ParameterT {
 
     @XmlAttribute
     @XmlSchemaType(name = "nonNegativeInteger")
@@ -56,11 +48,9 @@ public class NumericT
 
     /**
      * Gets the value of the precision property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getPrecision() {
         return precision;
@@ -68,11 +58,9 @@ public class NumericT
 
     /**
      * Sets the value of the precision property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setPrecision(BigInteger value) {
         this.precision = value;

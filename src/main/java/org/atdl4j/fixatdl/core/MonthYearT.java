@@ -16,11 +16,11 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Derived parameter type corresponding to the FIX "MonthYear" type defined in the FIX specification.
- * 
+ * <p>
  * <p>Java class for MonthYear_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="MonthYear_t">
  *   &lt;complexContent>
@@ -32,14 +32,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "MonthYear_t")
 public class MonthYearT
-    extends ParameterT
-{
+        extends ParameterT {
 
     @XmlAttribute
     protected String minValue;
@@ -50,11 +47,9 @@ public class MonthYearT
 
     /**
      * Gets the value of the minValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getMinValue() {
         return minValue;
@@ -62,11 +57,9 @@ public class MonthYearT
 
     /**
      * Sets the value of the minValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setMinValue(String value) {
         this.minValue = value;
@@ -74,11 +67,9 @@ public class MonthYearT
 
     /**
      * Gets the value of the maxValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getMaxValue() {
         return maxValue;
@@ -86,11 +77,9 @@ public class MonthYearT
 
     /**
      * Sets the value of the maxValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setMaxValue(String value) {
         this.maxValue = value;
@@ -98,11 +87,9 @@ public class MonthYearT
 
     /**
      * Gets the value of the constValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getConstValue() {
         return constValue;
@@ -110,11 +97,9 @@ public class MonthYearT
 
     /**
      * Sets the value of the constValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setConstValue(String value) {
         this.constValue = value;

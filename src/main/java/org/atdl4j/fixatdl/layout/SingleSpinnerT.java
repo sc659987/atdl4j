@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for SingleSpinner_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="SingleSpinner_t">
  *   &lt;complexContent>
@@ -37,14 +37,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SingleSpinner_t")
 public class SingleSpinnerT
-    extends ControlT
-{
+        extends ControlT {
 
     @XmlAttribute
     protected Double initValue;
@@ -55,11 +52,9 @@ public class SingleSpinnerT
 
     /**
      * Gets the value of the initValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *
+     * @return possible object is
+     * {@link Double }
      */
     public Double getInitValue() {
         return initValue;
@@ -67,11 +62,9 @@ public class SingleSpinnerT
 
     /**
      * Sets the value of the initValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Double }
      */
     public void setInitValue(Double value) {
         this.initValue = value;
@@ -79,11 +72,9 @@ public class SingleSpinnerT
 
     /**
      * Gets the value of the increment property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Double }
-     *     
+     *
+     * @return possible object is
+     * {@link Double }
      */
     public Double getIncrement() {
         return increment;
@@ -91,11 +82,9 @@ public class SingleSpinnerT
 
     /**
      * Sets the value of the increment property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Double }
      */
     public void setIncrement(Double value) {
         this.increment = value;
@@ -103,11 +92,9 @@ public class SingleSpinnerT
 
     /**
      * Gets the value of the incrementPolicy property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getIncrementPolicy() {
         return incrementPolicy;
@@ -115,11 +102,9 @@ public class SingleSpinnerT
 
     /**
      * Sets the value of the incrementPolicy property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setIncrementPolicy(String value) {
         this.incrementPolicy = value;

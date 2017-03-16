@@ -1,6 +1,5 @@
 package org.atdl4j.ui.app;
 
-public interface StrategySelectionEvent
-{
+public interface StrategySelectionEvent {
 
 }

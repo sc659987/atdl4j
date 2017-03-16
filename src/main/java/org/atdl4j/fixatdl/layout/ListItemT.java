@@ -8,21 +8,18 @@
 
 package org.atdl4j.fixatdl.layout;
 
+import org.atdl4j.fixatdl.flow.StateRuleT;
+
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
-import org.atdl4j.fixatdl.flow.StateRuleT;
 
 
 /**
  * <p>Java class for ListItem_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="ListItem_t">
  *   &lt;complexContent>
@@ -42,12 +39,10 @@ import org.atdl4j.fixatdl.flow.StateRuleT;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ListItem_t", propOrder = {
-    "stateRule"
+        "stateRule"
 })
 public class ListItemT {
 
@@ -60,25 +55,23 @@ public class ListItemT {
 
     /**
      * Gets the value of the stateRule property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the stateRule property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getStateRule().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link StateRuleT }
-     * 
-     * 
      */
     public List<StateRuleT> getStateRule() {
         if (stateRule == null) {
@@ -89,11 +82,9 @@ public class ListItemT {
 
     /**
      * Gets the value of the enumID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getEnumID() {
         return enumID;
@@ -101,11 +92,9 @@ public class ListItemT {
 
     /**
      * Sets the value of the enumID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setEnumID(String value) {
         this.enumID = value;
@@ -113,11 +102,9 @@ public class ListItemT {
 
     /**
      * Gets the value of the uiRep property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getUiRep() {
         return uiRep;
@@ -125,11 +112,9 @@ public class ListItemT {
 
     /**
      * Sets the value of the uiRep property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setUiRep(String value) {
         this.uiRep = value;

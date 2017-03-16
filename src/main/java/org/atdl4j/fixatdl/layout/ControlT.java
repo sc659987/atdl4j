@@ -8,22 +8,18 @@
 
 package org.atdl4j.fixatdl.layout;
 
+import org.atdl4j.fixatdl.flow.StateRuleT;
+
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
-import org.atdl4j.fixatdl.flow.StateRuleT;
 
 
 /**
  * <p>Java class for Control_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="Control_t">
  *   &lt;complexContent>
@@ -62,30 +58,28 @@ import org.atdl4j.fixatdl.flow.StateRuleT;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Control_t", propOrder = {
-    "stateRule",
-    "helpText"
+        "stateRule",
+        "helpText"
 })
 @XmlSeeAlso({
-    DoubleSpinnerT.class,
-    MultiSelectListT.class,
-    LabelT.class,
-    CheckBoxListT.class,
-    RadioButtonT.class,
-    SingleSelectListT.class,
-    CheckBoxT.class,
-    HiddenFieldT.class,
-    EditableDropDownListT.class,
-    DropDownListT.class,
-    RadioButtonListT.class,
-    ClockT.class,
-    SingleSpinnerT.class,
-    TextFieldT.class,
-    SliderT.class
+        DoubleSpinnerT.class,
+        MultiSelectListT.class,
+        LabelT.class,
+        CheckBoxListT.class,
+        RadioButtonT.class,
+        SingleSelectListT.class,
+        CheckBoxT.class,
+        HiddenFieldT.class,
+        EditableDropDownListT.class,
+        DropDownListT.class,
+        RadioButtonListT.class,
+        ClockT.class,
+        SingleSpinnerT.class,
+        TextFieldT.class,
+        SliderT.class
 })
 public abstract class ControlT {
 
@@ -110,25 +104,23 @@ public abstract class ControlT {
 
     /**
      * Gets the value of the stateRule property.
-     * 
+     * <p>
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the stateRule property.
-     * 
+     * <p>
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getStateRule().add(newItem);
      * </pre>
-     * 
-     * 
+     * <p>
+     * <p>
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link StateRuleT }
-     * 
-     * 
      */
     public List<StateRuleT> getStateRule() {
         if (stateRule == null) {
@@ -139,11 +131,9 @@ public abstract class ControlT {
 
     /**
      * Gets the value of the helpText property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getHelpText() {
         return helpText;
@@ -151,11 +141,9 @@ public abstract class ControlT {
 
     /**
      * Sets the value of the helpText property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setHelpText(String value) {
         this.helpText = value;
@@ -163,11 +151,9 @@ public abstract class ControlT {
 
     /**
      * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getID() {
         return id;
@@ -175,11 +161,9 @@ public abstract class ControlT {
 
     /**
      * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setID(String value) {
         this.id = value;
@@ -187,11 +171,9 @@ public abstract class ControlT {
 
     /**
      * Gets the value of the parameterRef property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getParameterRef() {
         return parameterRef;
@@ -199,11 +181,9 @@ public abstract class ControlT {
 
     /**
      * Sets the value of the parameterRef property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setParameterRef(String value) {
         this.parameterRef = value;
@@ -211,11 +191,9 @@ public abstract class ControlT {
 
     /**
      * Gets the value of the label property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getLabel() {
         return label;
@@ -223,11 +201,9 @@ public abstract class ControlT {
 
     /**
      * Sets the value of the label property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setLabel(String value) {
         this.label = value;
@@ -235,11 +211,9 @@ public abstract class ControlT {
 
     /**
      * Gets the value of the initFixField property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getInitFixField() {
         return initFixField;
@@ -247,11 +221,9 @@ public abstract class ControlT {
 
     /**
      * Sets the value of the initFixField property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setInitFixField(String value) {
         this.initFixField = value;
@@ -259,11 +231,9 @@ public abstract class ControlT {
 
     /**
      * Gets the value of the initPolicy property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getInitPolicy() {
         return initPolicy;
@@ -271,11 +241,9 @@ public abstract class ControlT {
 
     /**
      * Sets the value of the initPolicy property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setInitPolicy(String value) {
         this.initPolicy = value;
@@ -283,11 +251,9 @@ public abstract class ControlT {
 
     /**
      * Gets the value of the tooltip property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getTooltip() {
         return tooltip;
@@ -295,11 +261,9 @@ public abstract class ControlT {
 
     /**
      * Sets the value of the tooltip property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setTooltip(String value) {
         this.tooltip = value;
@@ -307,11 +271,9 @@ public abstract class ControlT {
 
     /**
      * Gets the value of the disableForTemplate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public Boolean isDisableForTemplate() {
         return disableForTemplate;
@@ -319,11 +281,9 @@ public abstract class ControlT {
 
     /**
      * Sets the value of the disableForTemplate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setDisableForTemplate(Boolean value) {
         this.disableForTemplate = value;

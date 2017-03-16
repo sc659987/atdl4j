@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for LocalMktTz_t.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
@@ -425,7 +425,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
- * 
  */
 @XmlType(name = "LocalMktTz_t", namespace = "http://www.fixprotocol.org/FIXatdl-1-1/Timezones")
 @XmlEnum
@@ -1244,7 +1243,7 @@ public enum Timezone {
     }
 
     public static Timezone fromValue(String v) {
-        for (Timezone c: Timezone.values()) {
+        for (Timezone c : Timezone.values()) {
             if (c.value.equals(v)) {
                 return c;
             }

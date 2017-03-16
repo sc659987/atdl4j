@@ -8,20 +8,20 @@
 
 package org.atdl4j.fixatdl.core;
 
-import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
+import java.math.BigInteger;
 
 
 /**
- *  Derived parameter type corresponding to the FIX "MultipleStringValue" type defined in the FIX specification.
- * 
+ * Derived parameter type corresponding to the FIX "MultipleStringValue" type defined in the FIX specification.
+ * <p>
  * <p>Java class for MultipleStringValue_t complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="MultipleStringValue_t">
  *   &lt;complexContent>
@@ -34,14 +34,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "MultipleStringValue_t")
 public class MultipleStringValueT
-    extends ParameterT
-{
+        extends ParameterT {
 
     @XmlAttribute
     protected BigInteger minLength;
@@ -54,11 +51,9 @@ public class MultipleStringValueT
 
     /**
      * Gets the value of the minLength property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getMinLength() {
         return minLength;
@@ -66,11 +61,9 @@ public class MultipleStringValueT
 
     /**
      * Sets the value of the minLength property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setMinLength(BigInteger value) {
         this.minLength = value;
@@ -78,11 +71,9 @@ public class MultipleStringValueT
 
     /**
      * Gets the value of the maxLength property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @return possible object is
+     * {@link BigInteger }
      */
     public BigInteger getMaxLength() {
         return maxLength;
@@ -90,11 +81,9 @@ public class MultipleStringValueT
 
     /**
      * Sets the value of the maxLength property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link BigInteger }
      */
     public void setMaxLength(BigInteger value) {
         this.maxLength = value;
@@ -102,11 +91,9 @@ public class MultipleStringValueT
 
     /**
      * Gets the value of the invertOnWire property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
+     *
+     * @return possible object is
+     * {@link Boolean }
      */
     public boolean isInvertOnWire() {
         if (invertOnWire == null) {
@@ -118,11 +105,9 @@ public class MultipleStringValueT
 
     /**
      * Sets the value of the invertOnWire property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Boolean }
      */
     public void setInvertOnWire(Boolean value) {
         this.invertOnWire = value;
@@ -130,11 +115,9 @@ public class MultipleStringValueT
 
     /**
      * Gets the value of the constValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getConstValue() {
         return constValue;
@@ -142,11 +125,9 @@ public class MultipleStringValueT
 
     /**
      * Sets the value of the constValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setConstValue(String value) {
         this.constValue = value;
