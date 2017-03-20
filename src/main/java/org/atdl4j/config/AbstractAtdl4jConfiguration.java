@@ -953,34 +953,34 @@ public abstract class AbstractAtdl4jConfiguration
     }
 
     public void testClassLoaders() {
-        createAtdl4jWidgetForCheckBoxListT();
-        createAtdl4jWidgetForCheckBoxT();
-        createAtdl4jWidgetForClockT();
-        createAtdl4jWidgetForDoubleSpinnerT();
-        createAtdl4jWidgetForDropDownListT();
-        createAtdl4jWidgetForEditableDropDownListT();
-        createAtdl4jWidgetForHiddenFieldT();
-        createAtdl4jWidgetForLabelT();
-        createAtdl4jWidgetForMultiSelectListT();
-        createAtdl4jWidgetForRadioButtonListT();
-        createAtdl4jWidgetForRadioButtonT();
-        createAtdl4jWidgetForSingleSelectListT();
-        createAtdl4jWidgetForSingleSpinnerT();
-        createAtdl4jWidgetForSliderT();
-        createAtdl4jWidgetForTextFieldT();
-        createAtdl4jCompositePanel();
-        createAtdl4jInputAndFilterDataPanel();
-        createAtdl4jInputAndFilterDataSelectionPanel();
-        createAtdl4jTesterPanel();
-        createAtdl4jUserMessageHandler();
-        createAtdl4jWidgetFactory();
-        createFixatdlFileSelectionPanel();
-        createFixMsgLoadPanel();
-        createStrategiesUI();
-        createStrategyDescriptionPanel();
-        createStrategyPanelHelper();
-        createStrategySelectionPanel();
-        createStrategyUI();
-        createTypeConverterFactory();
+//        createAtdl4jWidgetForCheckBoxListT();
+//        createAtdl4jWidgetForCheckBoxT();
+//        createAtdl4jWidgetForClockT();
+//        createAtdl4jWidgetForDoubleSpinnerT();
+//        createAtdl4jWidgetForDropDownListT();
+//        createAtdl4jWidgetForEditableDropDownListT();
+//        createAtdl4jWidgetForHiddenFieldT();
+//        createAtdl4jWidgetForLabelT();
+//        createAtdl4jWidgetForMultiSelectListT();
+//        createAtdl4jWidgetForRadioButtonListT();
+//        createAtdl4jWidgetForRadioButtonT();
+//        createAtdl4jWidgetForSingleSelectListT();
+//        createAtdl4jWidgetForSingleSpinnerT();
+//        createAtdl4jWidgetForSliderT();
+//        createAtdl4jWidgetForTextFieldT();
+//        createAtdl4jCompositePanel();
+//        createAtdl4jInputAndFilterDataPanel();
+//        createAtdl4jInputAndFilterDataSelectionPanel();
+//        createAtdl4jTesterPanel();
+//        createAtdl4jUserMessageHandler();
+//        createAtdl4jWidgetFactory();
+//        createFixatdlFileSelectionPanel();
+//        createFixMsgLoadPanel();
+//        createStrategiesUI();
+//        createStrategyDescriptionPanel();
+//        createStrategyPanelHelper();
+//        createStrategySelectionPanel();
+//        createStrategyUI();
+//        createTypeConverterFactory();
     }
 }

@@ -1,0 +1,12 @@
+.hbox {
+    -fx-background-color: #2f4f4f;
+    -fx-padding: 15;
+    -fx-spacing: 10;
+}
+.pane {
+    -fx-background-color: #8fbc8f;
+}
+#hbox-custom {
+    -fx-background-radius: 5.0;
+    -fx-padding: 8;
+}

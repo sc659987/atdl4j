@@ -1,5 +1,6 @@
 package org.atdl4j.ui.fx.app.impl;
 
+import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.layout.HBox;
 import org.apache.log4j.Logger;
@@ -14,7 +15,6 @@ import org.atdl4j.ui.app.impl.AbstractAtdl4jTesterPanel;
 public class FX8Atdl4jTesterPanel extends AbstractAtdl4jTesterPanel {
 
     public final Logger logger = Logger.getLogger(FX8Atdl4jTesterPanel.class);
-
     private Scene parentComposite;
 
     private HBox inputAndFilterDataAndLoadMessageBox;
@@ -24,22 +24,23 @@ public class FX8Atdl4jTesterPanel extends AbstractAtdl4jTesterPanel {
     private HBox okCancelBox;
 
 
-
     @Override
-    public Object buildAtdl4jTesterPanel(Object aParentOrShell, Atdl4jOptions aAtdl4jOptions) {
+    public Object buildAtdl4jTesterPanel(Object aParentOrShell,
+                                         Atdl4jOptions aAtdl4jOptions) {
         if (!(aParentOrShell instanceof Scene))
             // TODO decide whether to throw exception or return null
             return null;
         this.parentComposite = (Scene) aParentOrShell;
-        // TODO init the screen.
-        init(this.parentComposite, aAtdl4jOptions);
+        HBox hBox = new HBox();
+        //init(this.parentComposite, aAtdl4jOptions);
         return null;
     }
 
 
     @Override
     public void closePanel() {
-
+        if (parentComposite != null)
+            Platform.exit();
     }
 
     @Override

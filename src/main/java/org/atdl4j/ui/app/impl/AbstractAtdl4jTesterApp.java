@@ -24,7 +24,7 @@ public abstract class AbstractAtdl4jTesterApp
     Atdl4jTesterPanel atdl4jTesterPanel;
 
     private void parseMainLineArgs(String[] args) {
-//TODO		
+//TODO
 /***
  // Load in a file if passed into the app arguments
  if (args.length > 0) {
@@ -67,7 +67,10 @@ public abstract class AbstractAtdl4jTesterApp
     }
 
 
-    protected void init(String[] args, Atdl4jConfiguration aAtdl4jConfiguration, Atdl4jOptions aAtdl4jOptions, Object aParentOrShell) {
+    protected void init(String[] args,
+                        Atdl4jConfiguration aAtdl4jConfiguration,
+                        Atdl4jOptions aAtdl4jOptions,
+                        Object aParentOrShell) {
         Atdl4jConfig.setConfig(aAtdl4jConfiguration);
 
         setAtdl4jOptions(aAtdl4jOptions);
