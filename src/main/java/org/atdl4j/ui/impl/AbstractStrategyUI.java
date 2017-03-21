@@ -121,7 +121,9 @@ public abstract class AbstractStrategyUI
      * @param parentContainer (should be swt.Composite)
      * @throws Atdl4jClassLoadException
      */
-    public void init(StrategyT strategy, StrategiesT aStrategies, Atdl4jOptions aAtdl4jOptions, Map<String, ValidationRule> strategiesRules, Object parentContainer) throws FIXatdlFormatException {
+    public void init(StrategyT strategy, StrategiesT aStrategies,
+                     Atdl4jOptions aAtdl4jOptions, Map<String, ValidationRule> strategiesRules,
+                     Object parentContainer) throws FIXatdlFormatException {
         setStrategy(strategy);
         setStrategies(aStrategies);
         setAtdl4jOptions(aAtdl4jOptions);
@@ -130,25 +132,24 @@ public abstract class AbstractStrategyUI
 
         // initialize rules collection with global rules
         setStrategyRuleset(new StrategyRuleset());
-
+//
         setParameterMap(buildParameters(getStrategy()));
-
+//
         setCompleteValidationRuleMap(buildGlobalAndLocalRuleMap(getStrategy(), strategiesRules));
-
+//
         buildAtdl4jWidgetMap();
-
+//
         checkForDuplicateControlIDs();
         createRadioGroups();
-
+//
         addHiddenFieldsForInputAndFilterData(getAtdl4jOptions().getInputAndFilterData());
-
+//
         buildAtdl4jWidgetWithParameterMap();
         attachGlobalStateRulesToControls();
-
+//
         addHiddenFieldsForParameterWithoutControl(getParameterMap());
-
+//
         attachStateListenersToAllAtdl4jWidgets();
-
 
         // -- Last statement --
         initEnd();

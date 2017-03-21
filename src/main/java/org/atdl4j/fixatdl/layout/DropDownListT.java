@@ -32,9 +32,12 @@ import java.util.List;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DropDownList_t", propOrder = {
+@XmlType(name = "DropDownList_t",
+        propOrder =
+                {
         "listItem"
-})
+                }
+        )
 public class DropDownListT
         extends ControlT {
 
